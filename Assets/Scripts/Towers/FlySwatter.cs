@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.XR;
 
@@ -16,21 +17,122 @@ public class FlySwatter : MonoBehaviour
 	public FlySwatterStats flySwatterStats { get; private set; }
 	public List<FlySwatterStats> statsModifiers = new List<FlySwatterStats>();
 
-	private const float attackRange = 0.5f;                                 // 사거리
-	private const float attackRate = 1.0f;                                  // 공격 속도 
+	private const float MinAttackRange = 0.5f;                                  // 사거리
+	private const float MinAttackSpeed = 1.0f;                                  // 공격 속도 
+	private const float MinAttackDelay = 1.5f;									// 공격 딜레이
+	private const float MinAttackPower = 2.0f;                                  // 공격력
+	private const float MinAttackSize = 1.0f;									// 공격 범위
 	private SpriteRenderer characterRenderer;
 
 	private FlySwatterState flySwatterState = FlySwatterState.SearchTarget; // 파리채 무기 상태
     private Transform attackTarget = null;                                  // 공격 대상
-    //private EnemySpawner enemySpawner;                                         // 게임에 존재하는 적 정보 획득용
+																			//private EnemySpawner enemySpawner;                                         // 게임에 존재하는 적 정보 획득용
 
-  //  public void Setup(EnemySpawner enemySpawner)
-  //  {
-  //      this.enemySpawner = enemySpawner;
+	//  public void Setup(EnemySpawner enemySpawner)
+	//  {
+	//      this.enemySpawner = enemySpawner;
 
-		//// 최초 상태 FlySwatterState.SearchTarget으로 설정
-		//ChangeState(FlySwatterState.SearchTarget);
-  //  }
+	//// 최초 상태 FlySwatterState.SearchTarget으로 설정
+	//ChangeState(FlySwatterState.SearchTarget);
+	//  }
+
+	private void Awake()
+	{
+		UpdateFlySwatterStats();
+	}
+
+	public void AddStatModifier(FlySwatterStats statModifier)
+	{
+		statsModifiers.Add(statModifier);
+		UpdateFlySwatterStats();
+	}
+
+	public void RemoveStatModifier(FlySwatterStats statModifier)
+	{
+		statsModifiers.Remove(statModifier);
+		UpdateFlySwatterStats();
+	}
+
+	private void UpdateFlySwatterStats()
+	{
+		FlySwatterSO attackSO = null;
+		if (baseStats.attackSO != null)
+		{
+			attackSO = Instantiate(baseStats.attackSO);
+		}
+
+		flySwatterStats = new FlySwatterStats { attackSO = attackSO };
+
+		UpdateStats((a, b) => b, baseStats);
+		if (flySwatterStats.attackSO != null)
+		{
+			flySwatterStats.attackSO.target = baseStats.attackSO.target;
+		}
+
+		foreach (FlySwatterStats modifier in statsModifiers.OrderBy(o => o.statsChangeType))
+		{
+			if (modifier.statsChangeType == StatsChangeType.Override)
+			{
+				UpdateStats((o, o1) => o1, modifier);
+			}
+			else if (modifier.statsChangeType == StatsChangeType.Add)
+			{
+				UpdateStats((o, o1) => o + o1, modifier);
+			}
+			else if (modifier.statsChangeType == StatsChangeType.Multiple)
+			{
+				UpdateStats((o, o1) => o * o1, modifier);
+			}
+		}
+
+		LimitAllStats();
+	}
+
+	private void UpdateStats(Func<float, float, float> operation, FlySwatterStats newModifier)
+	{
+		if (flySwatterStats.attackSO == null || newModifier.attackSO == null)
+			return;
+
+		UpdateAttackStats(operation, flySwatterStats.attackSO, newModifier.attackSO);
+
+		if (flySwatterStats.attackSO.GetType() != newModifier.attackSO.GetType())
+		{
+			return;
+		}
+	}
+
+	private void UpdateAttackStats(Func<float, float, float> operation, FlySwatterSO currentAttack, FlySwatterSO newAttack)
+	{
+		if (currentAttack == null || newAttack == null)
+		{
+			return;
+		}
+
+		currentAttack.delay = operation(currentAttack.delay, newAttack.delay);
+		currentAttack.power = operation(currentAttack.power, newAttack.power);
+		currentAttack.size = operation(currentAttack.size, newAttack.size);
+		currentAttack.speed = operation(currentAttack.speed, newAttack.speed);
+		currentAttack.range = operation(currentAttack.range, newAttack.range);
+	}
+
+	private void LimitStats(ref float stat, float minVal)
+	{
+		stat = Mathf.Max(stat, minVal);
+	}
+
+	private void LimitAllStats()
+	{
+		if (flySwatterStats == null || flySwatterStats.attackSO == null)
+		{
+			return;
+		}
+
+		LimitStats(ref flySwatterStats.attackSO.delay, MinAttackDelay);
+		LimitStats(ref flySwatterStats.attackSO.power, MinAttackPower);
+		LimitStats(ref flySwatterStats.attackSO.size, MinAttackSize);
+		LimitStats(ref flySwatterStats.attackSO.speed, MinAttackSpeed);
+		LimitStats(ref flySwatterStats.attackSO.range, MinAttackRange);
+	}
 
 	private void ChangeState(FlySwatterState newState)
 	{
@@ -100,7 +202,7 @@ public class FlySwatter : MonoBehaviour
 
             // 2. target이 공격 범위 안에 있는지 검사 (공격 범위 벗어나면 새로운 적 탐색)
             float distance = Vector3.Distance(attackTarget.position, transform.position);
-            if(distance > attackRange)
+            if(distance > MinAttackRange)
             {
                 attackTarget = null;
                 ChangeState(FlySwatterState.AttackToTarget);
@@ -108,7 +210,7 @@ public class FlySwatter : MonoBehaviour
             }
 
             // 3. attackRate 시간만큼 대기
-            yield return new WaitForSeconds(attackRange);
+            yield return new WaitForSeconds(MinAttackRange);
 
             // 4. 공격 (공격범위에 대미지)
             FlySwatterAttack();
