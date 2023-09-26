@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public enum FlySwatterStatsChangeType
 {
 	Add,
@@ -15,6 +16,7 @@ public class FlySwatterStats
 {
 	public FlySwatterStatsChangeType statsChangeType;
 
-	// ∞¯∞› µ•¿Ã≈Õ
+
+	// Í≥µÍ≤© Îç∞Ïù¥ÌÑ∞
 	public FlySwatterSO attackSO;
 }
