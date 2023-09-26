@@ -17,22 +17,22 @@ public class FlySwatter : MonoBehaviour
 	public FlySwatterStats flySwatterStats { get; private set; }
 	public List<FlySwatterStats> statsModifiers = new List<FlySwatterStats>();
 
-	private const float MinAttackRange = 0.5f;                                  // »ç°Å¸®
-	private const float MinAttackSpeed = 1.0f;                                  // °ø°İ ¼Óµµ 
-	private const float MinAttackDelay = 1.5f;									// °ø°İ µô·¹ÀÌ
-	private const float MinAttackPower = 2.0f;                                  // °ø°İ·Â
-	private const float MinAttackSize = 1.0f;									// °ø°İ ¹üÀ§
+	private const float MinAttackRange = 0.5f;                                  // ì‚¬ê±°ë¦¬
+	private const float MinAttackSpeed = 1.0f;                                  // ê³µê²© ì†ë„ 
+	private const float MinAttackDelay = 1.5f;									// ê³µê²© ë”œë ˆì´
+	private const float MinAttackPower = 2.0f;                                  // ê³µê²©ë ¥
+	private const float MinAttackSize = 1.0f;									// ê³µê²© ë²”ìœ„
 	private SpriteRenderer characterRenderer;
 
-	private FlySwatterState flySwatterState = FlySwatterState.SearchTarget; // ÆÄ¸®Ã¤ ¹«±â »óÅÂ
-    private Transform attackTarget = null;                                  // °ø°İ ´ë»ó
-																			//private EnemySpawner enemySpawner;                                         // °ÔÀÓ¿¡ Á¸ÀçÇÏ´Â Àû Á¤º¸ È¹µæ¿ë
+	private FlySwatterState flySwatterState = FlySwatterState.SearchTarget; // íŒŒë¦¬ì±„ ë¬´ê¸° ìƒíƒœ
+    private Transform attackTarget = null;                                  // ê³µê²© ëŒ€ìƒ
+																			//private EnemySpawner enemySpawner;                                         // ê²Œì„ì— ì¡´ì¬í•˜ëŠ” ì  ì •ë³´ íšë“ìš©
 
 	//  public void Setup(EnemySpawner enemySpawner)
 	//  {
 	//      this.enemySpawner = enemySpawner;
 
-	//// ÃÖÃÊ »óÅÂ FlySwatterState.SearchTargetÀ¸·Î ¼³Á¤
+	//// ìµœì´ˆ ìƒíƒœ FlySwatterState.SearchTargetìœ¼ë¡œ ì„¤ì •
 	//ChangeState(FlySwatterState.SearchTarget);
 	//  }
 
@@ -71,15 +71,15 @@ public class FlySwatter : MonoBehaviour
 
 		foreach (FlySwatterStats modifier in statsModifiers.OrderBy(o => o.statsChangeType))
 		{
-			if (modifier.statsChangeType == StatsChangeType.Override)
+			if (modifier.statsChangeType == FlySwatterStatsChangeType.Override)
 			{
 				UpdateStats((o, o1) => o1, modifier);
 			}
-			else if (modifier.statsChangeType == StatsChangeType.Add)
+			else if (modifier.statsChangeType == FlySwatterStatsChangeType.Add)
 			{
 				UpdateStats((o, o1) => o + o1, modifier);
 			}
-			else if (modifier.statsChangeType == StatsChangeType.Multiple)
+			else if (modifier.statsChangeType == FlySwatterStatsChangeType.Multiple)
 			{
 				UpdateStats((o, o1) => o * o1, modifier);
 			}
@@ -136,11 +136,11 @@ public class FlySwatter : MonoBehaviour
 
 	private void ChangeState(FlySwatterState newState)
 	{
-		// ÀÌÀü »óÅÂ Á¾·á
+		// ì´ì „ ìƒíƒœ ì¢…ë£Œ
         StopCoroutine(flySwatterState.ToString());
-        // »óÅÂ º¯°æ
+        // ìƒíƒœ ë³€ê²½
         flySwatterState = newState;
-        // »õ·Î¿î »óÅÂ Àç»ı
+        // ìƒˆë¡œìš´ ìƒíƒœ ì¬ìƒ
         StartCoroutine(flySwatterState.ToString());
 	}
 
@@ -166,13 +166,13 @@ public class FlySwatter : MonoBehaviour
     //{
     //    while (true)
     //    {
-    //        // Á¦ÀÏ °¡±îÀÌ ÀÖ´Â ÀûÀ» Ã£±â À§ÇØ ÃÖÃÊ °Å¸®¸¦ ÃÖ´ëÇÑ Å©°Ô ¼³Á¤
+    //        // ì œì¼ ê°€ê¹Œì´ ìˆëŠ” ì ì„ ì°¾ê¸° ìœ„í•´ ìµœì´ˆ ê±°ë¦¬ë¥¼ ìµœëŒ€í•œ í¬ê²Œ ì„¤ì •
     //        float closestDistSqr = Mathf.Infinity;
-    //        // EnemySpawnerÀÇ EnemyList¿¡ ÀÖ´Â ÇöÀç ¸Ê¿¡ Á¸ÀçÇÏ´Â ¸ğµç Àû °Ë»ç
+    //        // EnemySpawnerì˜ EnemyListì— ìˆëŠ” í˜„ì¬ ë§µì— ì¡´ì¬í•˜ëŠ” ëª¨ë“  ì  ê²€ì‚¬
     //        for (int i = 0; i < enemySpawner.EnemyList.Count; i++)
     //        {
     //            float distance = Vector3.Distance(enemySpawner.EnemyList[i].transform.position, attackTarget.position);
-    //            // ÇöÀç °Ë»çÁßÀÎ Àû°úÀÇ °Å¸®°¡ °ø°İ¹üÀ§ ³»¿¡ ÀÖ°í, ÇöÀç±îÁö °Ë»çÇÑ Àûº¸´Ù °Å¸®°¡ °¡±õ´Ù¸é
+    //            // í˜„ì¬ ê²€ì‚¬ì¤‘ì¸ ì ê³¼ì˜ ê±°ë¦¬ê°€ ê³µê²©ë²”ìœ„ ë‚´ì— ìˆê³ , í˜„ì¬ê¹Œì§€ ê²€ì‚¬í•œ ì ë³´ë‹¤ ê±°ë¦¬ê°€ ê°€ê¹ë‹¤ë©´
     //            if ( distance <= attackRange && distance <= closestDistSqr )
     //            {
     //                closestDistSqr = distance;
@@ -193,14 +193,14 @@ public class FlySwatter : MonoBehaviour
     {
         while (true)
         {
-            // 1. targetÀÌ ÀÖ´ÂÁö °Ë»ç (´Ù¸¥ Å¸¿ö¿¡ ÀÇÇØ »ç¸Á, goal±îÁö ÀÌµ¿ÇØ »èÁ¦ µî)
+            // 1. targetì´ ìˆëŠ”ì§€ ê²€ì‚¬ (ë‹¤ë¥¸ íƒ€ì›Œì— ì˜í•´ ì‚¬ë§, goalê¹Œì§€ ì´ë™í•´ ì‚­ì œ ë“±)
             if ( attackTarget == null)
             {
                 ChangeState(FlySwatterState.SearchTarget);
                 break;
             }
 
-            // 2. targetÀÌ °ø°İ ¹üÀ§ ¾È¿¡ ÀÖ´ÂÁö °Ë»ç (°ø°İ ¹üÀ§ ¹ş¾î³ª¸é »õ·Î¿î Àû Å½»ö)
+            // 2. targetì´ ê³µê²© ë²”ìœ„ ì•ˆì— ìˆëŠ”ì§€ ê²€ì‚¬ (ê³µê²© ë²”ìœ„ ë²—ì–´ë‚˜ë©´ ìƒˆë¡œìš´ ì  íƒìƒ‰)
             float distance = Vector3.Distance(attackTarget.position, transform.position);
             if(distance > MinAttackRange)
             {
@@ -209,10 +209,10 @@ public class FlySwatter : MonoBehaviour
                 break;
             }
 
-            // 3. attackRate ½Ã°£¸¸Å­ ´ë±â
+            // 3. attackRate ì‹œê°„ë§Œí¼ ëŒ€ê¸°
             yield return new WaitForSeconds(MinAttackRange);
 
-            // 4. °ø°İ (°ø°İ¹üÀ§¿¡ ´ë¹ÌÁö)
+            // 4. ê³µê²© (ê³µê²©ë²”ìœ„ì— ëŒ€ë¯¸ì§€)
             FlySwatterAttack();
 		}
     }
@@ -220,7 +220,7 @@ public class FlySwatter : MonoBehaviour
 	private void FlySwatterAttack()
 	{
 		// TODO
-        // 1. °ø°İ ¾Ö´Ï¸ŞÀÌ¼Ç Àç»ı
-        // 2. ÇØ´ç ¹üÀ§ÀÇ enemyµé¿¡°Ô ´ë¹ÌÁö Àü´Ş
+        // 1. ê³µê²© ì• ë‹ˆë©”ì´ì…˜ ì¬ìƒ
+        // 2. í•´ë‹¹ ë²”ìœ„ì˜ enemyë“¤ì—ê²Œ ëŒ€ë¯¸ì§€ ì „ë‹¬
 	}
 }
