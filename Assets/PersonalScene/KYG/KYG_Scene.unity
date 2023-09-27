@@ -863,7 +863,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 236914433}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1971296645}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: PickTower
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 236914435}
+          m_ObjectArgumentAssemblyTypeName: UIStore, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &236914433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -914,8 +926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a708a0f83fa15b0489060470ec04ac91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: []
-  towerSpawner: {fileID: 0}
+  towerPerfab: {fileID: 2660729861532404988, guid: 5fbd33a0069ce62468d7bcc8fd686b24, type: 3}
 --- !u!1 &304483618
 GameObject:
   m_ObjectHideFlags: 0
@@ -2191,8 +2202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a708a0f83fa15b0489060470ec04ac91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: []
-  towerSpawner: {fileID: 0}
+  towerPerfab: {fileID: 0}
 --- !u!1 &689382969
 GameObject:
   m_ObjectHideFlags: 0
@@ -2666,7 +2676,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &875180381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2679,6 +2689,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0596e102cf8a3574aab8bcaa76575b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Upgrade1Img: {fileID: 1668930180}
+  Upgrade2Img: {fileID: 390346200}
 --- !u!114 &875180382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2823,7 +2835,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 876647680}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1971296645}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: PickTower
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 876647682}
+          m_ObjectArgumentAssemblyTypeName: UIStore, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &876647680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2874,8 +2898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a708a0f83fa15b0489060470ec04ac91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: []
-  towerSpawner: {fileID: 0}
+  towerPerfab: {fileID: 2019595625821246295, guid: f1ceadd829db69a4f885529934b10864, type: 3}
 --- !u!1 &934157440
 GameObject:
   m_ObjectHideFlags: 0
@@ -3197,6 +3220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerSpawner: {fileID: 1051757326}
+  uIUpgrade: {fileID: 875180381}
 --- !u!4 &996155328
 Transform:
   m_ObjectHideFlags: 0
@@ -3314,10 +3338,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed592c0ae390794398afc11330aba91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerPrefab:
-  - {fileID: 2660729861532404988, guid: 5fbd33a0069ce62468d7bcc8fd686b24, type: 3}
-  - {fileID: 2019595625821246295, guid: f1ceadd829db69a4f885529934b10864, type: 3}
-  - {fileID: 5690555718630223009, guid: 4fd800bb78578ec4792045217699a947, type: 3}
 --- !u!4 &1051757327
 Transform:
   m_ObjectHideFlags: 0
@@ -3598,7 +3618,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1198872374}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1971296645}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: PickTower
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1198872376}
+          m_ObjectArgumentAssemblyTypeName: UIStore, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1198872374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3649,8 +3681,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a708a0f83fa15b0489060470ec04ac91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: []
-  towerSpawner: {fileID: 0}
+  towerPerfab: {fileID: 5690555718630223009, guid: 4fd800bb78578ec4792045217699a947, type: 3}
 --- !u!1 &1240127151
 GameObject:
   m_ObjectHideFlags: 0
