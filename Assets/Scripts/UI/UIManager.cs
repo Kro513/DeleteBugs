@@ -17,8 +17,15 @@ public class UIManager : MonoBehaviour
         Instance = this;
     }
 
+    // 타워 선택(Buy 버튼)
     public void PickTower(UIStore towerBtn)
     {
         this.ClickedBtn = towerBtn;
+    }
+
+    // 타워 구매(Buy 버튼)
+    public void BuyTower()
+    {
+        ClickedBtn = null;
     }
 }
