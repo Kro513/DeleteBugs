@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class TowerSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject towerPrefab;
-    //[SerializeField] private Transform parentTransform;
+    [SerializeField] private GameObject[] towerPrefab;
 
     public void SpawnTower(Transform tileTransform)
     {
@@ -18,8 +17,9 @@ public class TowerSpawner : MonoBehaviour
         }
 
         tile.IsBulidTower = true; // 타원 건설되어 있음으로 설정
-        /*GameObject newTower = */Instantiate(towerPrefab, tileTransform.position, Quaternion.identity); // 선택 위치 타워 생성
-        /*newTower.transform.SetParent(parentTransform);*/
-        
+       
+        Instantiate(towerPrefab[], tileTransform.position, Quaternion.identity); // 선택 위치 타워 생성
+
+
     }
 }
