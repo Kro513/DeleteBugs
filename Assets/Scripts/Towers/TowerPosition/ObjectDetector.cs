@@ -26,6 +26,7 @@ public class ObjectDetector : MonoBehaviour
                 // "Tile" 태그 오브젝트에 부딪히면
                 if (hit.transform.CompareTag("Tile")) 
                 {
+                    Debug.Log("hit");
                     towerSpawner.SpawnTower(hit.transform); // 타워 생성 함수 호출
                 }
             }
