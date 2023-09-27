@@ -1,28 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
     
     public int _Gold;
     public int _currentHp;
-    public int maxHealth = 10;
-    
+    public int _maxHealth = 10;
+    public Text PlayerHPDisplay;
 
     private void Awake()
     {
-        _currentHp = maxHealth;
+        _currentHp = _maxHealth;
         _Gold = 100;
-        
+        UpdateHealthUI();
     }
 
     // Start is called before the first frame update
    public void GetDamage(int damage)
     {
         _currentHp -= damage;
-        //UpdateHealthUI();
+        UpdateHealthUI();
 
         if (_currentHp == 0)
         {
@@ -40,6 +40,14 @@ public class Player : MonoBehaviour
 
     }
 
+    private void UpdateHealthUI()
+    {
+        PlayerHPDisplay.text = "¸ñ¼û:" + _currentHp.ToString() + "/" + _maxHealth.ToString();
+    }
     // Update is called once per frame
-    
+
+    public void RecoverHP()
+    {
+        //HPÈ¸º¹
+    }
 }

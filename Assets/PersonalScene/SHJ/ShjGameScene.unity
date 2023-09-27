@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 308695019}
   - component: {fileID: 308695021}
   - component: {fileID: 308695020}
-  - component: {fileID: 308695022}
   m_Layer: 5
   m_Name: PlayerHPDisplay
   m_TagString: Untagged
@@ -184,10 +183,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
-    m_FontStyle: 0
+    m_FontSize: 20
+    m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 3
+    m_MinSize: 2
     m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -204,19 +203,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 308695018}
   m_CullTransparentMesh: 1
---- !u!114 &308695022
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 308695018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98d64859142d53c43bcf0d20943380de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PlayerHPDisplay: {fileID: 308695020}
 --- !u!1 &508683308
 GameObject:
   m_ObjectHideFlags: 0
@@ -511,7 +497,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _Gold: 0
   _currentHp: 0
-  maxHealth: 10
+  _maxHealth: 10
+  PlayerHPDisplay: {fileID: 308695020}
 --- !u!4 &1241607770
 Transform:
   m_ObjectHideFlags: 0
