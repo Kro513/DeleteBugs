@@ -10,16 +10,16 @@ public class TowerSpawner : MonoBehaviour
     {
         Tile tile = tileTransform.GetComponent<Tile>();
 
-        // Å¸¿ö °Ç¼³ °¡´É ¿©ºÎ È®ÀÎ
-        if (tile.IsBulidTower == true) // ÇöÀç Å¸ÀÏ¿¡ Å¸¿ö°¡ ÀÌ¹Ì ¼³Ä¡µÇ¾î ÀÖÀ¸¸é
+        // íƒ€ì›Œ ê±´ì„¤ ê°€ëŠ¥ ì—¬ë¶€ í™•ì¸
+        if (tile.IsBulidTower == true) // í˜„ì¬ íƒ€ì¼ì— íƒ€ì›Œê°€ ì´ë¯¸ ì„¤ì¹˜ë˜ì–´ ìˆìœ¼ë©´
         {
-            return; // Å¸¿ø °Ç¼³X
+            return; // íƒ€ì› ê±´ì„¤X
         }
 
-        tile.IsBulidTower = true; // Å¸¿ø °Ç¼³µÇ¾î ÀÖÀ½À¸·Î ¼³Á¤
-       
-        Instantiate(towerPrefab[], tileTransform.position, Quaternion.identity); // ¼±ÅÃ À§Ä¡ Å¸¿ö »ı¼º
-
-
+        tile.IsBulidTower = true; // íƒ€ì› ê±´ì„¤ë˜ì–´ ìˆìŒìœ¼ë¡œ ì„¤ì •
+        /*GameObject newTower = */Instantiate(towerPrefab, tileTransform.position, Quaternion.identity); // ì„ íƒ ìœ„ì¹˜ íƒ€ì›Œ ìƒì„±
+        /*newTower.transform.SetParent(parentTransform);*/
+        
+        //Instantiate(towerPrefab[], tileTransform.position, Quaternion.identity); // ì„ íƒ ìœ„ì¹˜ íƒ€ì›Œ ìƒì„±
     }
 }
