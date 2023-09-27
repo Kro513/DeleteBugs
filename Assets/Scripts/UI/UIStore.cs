@@ -6,22 +6,13 @@ using TMPro;
 
 public class UIStore : MonoBehaviour
 {
-    [SerializeField] private Button[] button;
-    [SerializeField] private TowerSpawner towerSpawner;
+    [SerializeField] private GameObject towerPerfab;
 
-    //[SerializeField] TMP_Text[] coinTxt;
-
-    private void Start()
+    public GameObject TowerPrefab
     {
-        for(int i = 0; i < button.Length; i++)
+        get
         {
-            int buttonIndex = i;
-            button[i].onClick.AddListener(() => OnButtonClick(buttonIndex));
+            return towerPerfab;
         }
-    }
-
-    void OnButtonClick(int buttonIndex)
-    {
-        //towerSpawner.SpawnTower(buttonIndex);
     }
 }

@@ -791,8 +791,9 @@ GameObject:
   - component: {fileID: 236914434}
   - component: {fileID: 236914433}
   - component: {fileID: 236914432}
+  - component: {fileID: 236914435}
   m_Layer: 5
-  m_Name: Buy_Btn
+  m_Name: BuyFlyFlap_Btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -901,6 +902,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 236914430}
   m_CullTransparentMesh: 1
+--- !u!114 &236914435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236914430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a708a0f83fa15b0489060470ec04ac91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: []
+  towerSpawner: {fileID: 0}
 --- !u!1 &304483618
 GameObject:
   m_ObjectHideFlags: 0
@@ -2177,6 +2192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: []
+  towerSpawner: {fileID: 0}
 --- !u!1 &689382969
 GameObject:
   m_ObjectHideFlags: 0
@@ -2663,8 +2679,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0596e102cf8a3574aab8bcaa76575b1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Upgrade1Img: {fileID: 1668930180}
-  Upgrade2Img: {fileID: 390346200}
 --- !u!114 &875180382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2737,8 +2751,9 @@ GameObject:
   - component: {fileID: 876647681}
   - component: {fileID: 876647680}
   - component: {fileID: 876647679}
+  - component: {fileID: 876647682}
   m_Layer: 5
-  m_Name: Buy_Btn
+  m_Name: BuyPesticide_Btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2847,6 +2862,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 876647677}
   m_CullTransparentMesh: 1
+--- !u!114 &876647682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876647677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a708a0f83fa15b0489060470ec04ac91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: []
+  towerSpawner: {fileID: 0}
 --- !u!1 &934157440
 GameObject:
   m_ObjectHideFlags: 0
@@ -3168,7 +3197,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerSpawner: {fileID: 1051757326}
-  uIUpgrade: {fileID: 875180381}
 --- !u!4 &996155328
 Transform:
   m_ObjectHideFlags: 0
@@ -3498,8 +3526,9 @@ GameObject:
   - component: {fileID: 1198872375}
   - component: {fileID: 1198872374}
   - component: {fileID: 1198872373}
+  - component: {fileID: 1198872376}
   m_Layer: 5
-  m_Name: Buy_Btn
+  m_Name: BuyFlyTrap_Btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3608,6 +3637,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1198872371}
   m_CullTransparentMesh: 1
+--- !u!114 &1198872376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198872371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a708a0f83fa15b0489060470ec04ac91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: []
+  towerSpawner: {fileID: 0}
 --- !u!1 &1240127151
 GameObject:
   m_ObjectHideFlags: 0
