@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3a51d98935dad1c43aa70d3b0e733d42
+guid: 518a7b68d7fddf649a177641892ff793
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,11 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-<<<<<<< Updated upstream:Assets/Resources/Images/UIImage/SUN.png.meta
   spritePixelsToUnits: 20
-=======
-  spritePixelsToUnits: 300
->>>>>>> Stashed changes:Assets/Resources/Images/Tower/살충제_atk_3.png.meta
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
