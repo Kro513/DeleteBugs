@@ -2287,11 +2287,7 @@ GameObject:
   - component: {fileID: 774335235}
   - component: {fileID: 774335234}
   m_Layer: 5
-<<<<<<< Updated upstream
   m_Name: Button (Legacy) (1)
-=======
-  m_Name: QuitButton
->>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3381,20 +3377,12 @@ GameObject:
   - component: {fileID: 1020169662}
   - component: {fileID: 1020169661}
   m_Layer: 5
-<<<<<<< Updated upstream
   m_Name: ResumePanel
-=======
-  m_Name: PausePanel
->>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-<<<<<<< Updated upstream
   m_IsActive: 1
-=======
-  m_IsActive: 0
->>>>>>> Stashed changes
 --- !u!224 &1020169660
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4165,14 +4153,8 @@ GameObject:
   - component: {fileID: 1365267422}
   - component: {fileID: 1365267421}
   - component: {fileID: 1365267420}
-<<<<<<< Updated upstream
   m_Layer: 5
   m_Name: ResumeButton
-=======
-  - component: {fileID: 1365267423}
-  m_Layer: 5
-  m_Name: PauseButton
->>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4242,23 +4224,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1365267421}
   m_OnClick:
     m_PersistentCalls:
-<<<<<<< Updated upstream
       m_Calls: []
-=======
-      m_Calls:
-      - m_Target: {fileID: 1365267423}
-        m_TargetAssemblyTypeName: UIPauseButton, Assembly-CSharp
-        m_MethodName: TogglePausePanel
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
->>>>>>> Stashed changes
 --- !u!114 &1365267421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4297,22 +4263,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1365267418}
   m_CullTransparentMesh: 1
-<<<<<<< Updated upstream
-=======
---- !u!114 &1365267423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1365267418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8fc7c8a238e53b4eb5ac211e9048dbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  PausePanel: {fileID: 1020169659}
->>>>>>> Stashed changes
 --- !u!1 &1397392022
 GameObject:
   m_ObjectHideFlags: 0
@@ -5350,11 +5300,7 @@ GameObject:
   - component: {fileID: 1819103920}
   - component: {fileID: 1819103919}
   m_Layer: 5
-<<<<<<< Updated upstream
   m_Name: Button (Legacy)
-=======
-  m_Name: PreferenceButton
->>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5690,11 +5636,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a708a0f83fa15b0489060470ec04ac91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< Updated upstream
-=======
-  button: []
-  towerSpawner: {fileID: 0}
->>>>>>> Stashed changes
 --- !u!1 &1939875097
 GameObject:
   m_ObjectHideFlags: 0
@@ -5970,11 +5911,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-<<<<<<< Updated upstream
   m_SizeDelta: {x: 500, y: 300}
-=======
-  m_SizeDelta: {x: 300, y: 200}
->>>>>>> Stashed changes
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2065723189
 MonoBehaviour:
@@ -5989,11 +5926,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-<<<<<<< Updated upstream
   m_Color: {r: 0.5754717, g: 0.5537811, b: 0.53475434, a: 1}
-=======
-  m_Color: {r: 0.5754717, g: 0.5537811, b: 0.53475434, a: 0.8666667}
->>>>>>> Stashed changes
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
