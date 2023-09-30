@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.XR;
 
@@ -16,6 +17,7 @@ public class FlySwatter : MonoBehaviour
 	[SerializeField] private FlySwatterStats baseStats;
 	public FlySwatterStats flySwatterStats { get; private set; }
 	public List<FlySwatterStats> statsModifiers = new List<FlySwatterStats>();
+	Animator animator;
 
 	private const float MinAttackRange = 0.5f;                                  // 사거리
 	private const float MinAttackSpeed = 1.0f;                                  // 공격 속도 
@@ -26,7 +28,11 @@ public class FlySwatter : MonoBehaviour
 
 	private FlySwatterState flySwatterState = FlySwatterState.SearchTarget; // 파리채 무기 상태
     private Transform attackTarget = null;                                  // 공격 대상
-																			//private EnemySpawner enemySpawner;                                         // 게임에 존재하는 적 정보 획득용
+
+	private float curTime;
+	public Transform pos;
+	public float circleSize;
+	//private EnemySpawner enemySpawner;                                         // 게임에 존재하는 적 정보 획득용
 
 	//  public void Setup(EnemySpawner enemySpawner)
 	//  {
@@ -146,10 +152,31 @@ public class FlySwatter : MonoBehaviour
 
 	private void Update()
 	{
-		if (attackTarget != null)
-        {
-            RotateToTarget();
-        }
+		if(curTime <= 0)
+		{
+			if(attackTarget != null)
+			{
+				RotateToTarget();
+
+				Collider2D[] collider2Ds = Physics2D.OverlapCircleAll(pos.position, circleSize, 0);
+				foreach (Collider2D collider in collider2Ds)
+				{
+					Debug.Log(collider.tag);
+				}
+				animator.SetTrigger("atk");
+				curTime = MinAttackDelay;
+			}
+		}
+		else
+		{
+			curTime -= Time.deltaTime;
+		}
+	}
+
+	private void OnDrawGizmos()
+	{
+		Gizmos.color = Color.blue;
+		Gizmos.DrawWireSphere(pos.position, circleSize);
 	}
 
 	private void RotateToTarget()

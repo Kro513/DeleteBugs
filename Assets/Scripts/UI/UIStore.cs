@@ -1,18 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class UIStore : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Button[] button;
+    [SerializeField] private TowerSpawner towerSpawner;
+
+    //[SerializeField] TMP_Text[] coinTxt;
+
+    private void Start()
     {
-        
+        for(int i = 0; i < button.Length; i++)
+        {
+            int buttonIndex = i;
+            button[i].onClick.AddListener(() => OnButtonClick(buttonIndex));
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnButtonClick(int buttonIndex)
     {
-        
+        //towerSpawner.SpawnTower(buttonIndex);
     }
 }
