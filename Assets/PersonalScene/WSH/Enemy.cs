@@ -28,7 +28,7 @@ public class Enemy : MonoBehaviour
 
         while (true)
         {
-            transform.Rotate(Vector3.forward * 10);
+            transform.Rotate(Vector3.forward * 0);
             if (Vector3.Distance(transform.position, wayPoints[currentIndex].position) < 0.02f * movement2D.MoveSpeed)
             {
                 NextMoveTo();

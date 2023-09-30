@@ -210,7 +210,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 92455577}
-  - component: {fileID: 92455576}
+  - component: {fileID: 92455578}
+  - component: {fileID: 92455579}
+  - component: {fileID: 92455581}
+  - component: {fileID: 92455580}
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Untagged
@@ -218,7 +221,52 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &92455576
+--- !u!4 &92455577
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92455575}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &92455578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92455575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3594eb1b69557448aabb588e3283067, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 573129311088771011, guid: 532953b9991f73e47846a4662c88b0d6, type: 3}
+  spawnTime: 3
+  wayPoints:
+  - {fileID: 448188501}
+  - {fileID: 280095629}
+  - {fileID: 3257635}
+  - {fileID: 1938696397}
+  - {fileID: 1504343275}
+  - {fileID: 736591591}
+  - {fileID: 1630691265}
+  - {fileID: 172230987}
+  - {fileID: 1001988305}
+  - {fileID: 520794787}
+  - {fileID: 130910729}
+  - {fileID: 1427937808}
+  - {fileID: 971222678}
+  - {fileID: 719738661}
+  - {fileID: 92987694}
+--- !u!114 &92455579
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -248,21 +296,66 @@ MonoBehaviour:
   - {fileID: 971222678}
   - {fileID: 719738661}
   - {fileID: 92987694}
---- !u!4 &92455577
-Transform:
+--- !u!114 &92455580
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 92455575}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3594eb1b69557448aabb588e3283067, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 9074976774318287808, guid: 373cbffe7e8d5ed48962a0b0c1850a50, type: 3}
+  spawnTime: 5
+  wayPoints:
+  - {fileID: 448188501}
+  - {fileID: 280095629}
+  - {fileID: 3257635}
+  - {fileID: 1938696397}
+  - {fileID: 1504343275}
+  - {fileID: 736591591}
+  - {fileID: 1630691265}
+  - {fileID: 172230987}
+  - {fileID: 1001988305}
+  - {fileID: 520794787}
+  - {fileID: 130910729}
+  - {fileID: 1427937808}
+  - {fileID: 971222678}
+  - {fileID: 719738661}
+  - {fileID: 92987694}
+--- !u!114 &92455581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 92455575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3594eb1b69557448aabb588e3283067, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyPrefab: {fileID: 3896670401668699404, guid: 6a2ac7ce04aec754ca6200a9f52a3928, type: 3}
+  spawnTime: 10
+  wayPoints:
+  - {fileID: 448188501}
+  - {fileID: 280095629}
+  - {fileID: 3257635}
+  - {fileID: 1938696397}
+  - {fileID: 1504343275}
+  - {fileID: 736591591}
+  - {fileID: 1630691265}
+  - {fileID: 172230987}
+  - {fileID: 1001988305}
+  - {fileID: 520794787}
+  - {fileID: 130910729}
+  - {fileID: 1427937808}
+  - {fileID: 971222678}
+  - {fileID: 719738661}
+  - {fileID: 92987694}
 --- !u!4 &92987694 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8241798327757999140, guid: 188b752567f18d846a59e47f1a9b1c12, type: 3}
