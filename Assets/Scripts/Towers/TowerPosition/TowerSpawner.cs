@@ -19,6 +19,8 @@ public class TowerSpawner : MonoBehaviour
             tile.IsBulidTower = true; // 타원 건설되어 있음으로 설정
             Instantiate(UIManager.Instance.ClickedBtn.TowerPrefab, tileTransform.position, Quaternion.identity); // 선택 위치 타워 생성
 
+            Hover_.Instance.Deactivate();
+
             UIManager.Instance.BuyTower();
         }
     }

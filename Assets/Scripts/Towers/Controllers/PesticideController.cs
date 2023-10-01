@@ -18,6 +18,6 @@ public class PesticideController : MonoBehaviour
     }
     private void HandleAttackDelay()
     {
-        if(Stats.Pesti)
+        //if(Stats.Pesti)
     }
 }

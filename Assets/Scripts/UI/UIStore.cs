@@ -7,12 +7,21 @@ using TMPro;
 public class UIStore : MonoBehaviour
 {
     [SerializeField] private GameObject towerPerfab;
+    [SerializeField] private Sprite sprite;
 
     public GameObject TowerPrefab
     {
         get
         {
             return towerPerfab;
+        }
+    }
+
+    public Sprite Sprite
+    {
+        get
+        {
+            return sprite;
         }
     }
 }

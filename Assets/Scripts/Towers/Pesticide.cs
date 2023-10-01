@@ -156,15 +156,18 @@ public class Pesticide : MonoBehaviour
         Gizmos.DrawWireSphere(pos.position, circleSize);
     }
 
+    // 타워 회전
     private void RotateToTarget()
     {
-        float dx = attackTarget.position.x - transform.position.x;
-        float dy = attackTarget.position.y - transform.position.y;
+        float dx = attackTarget.position.x - transform.position.x; // 타워와 적 사이의 수평 거리
+        float dy = attackTarget.position.y - transform.position.y; // 타원와 적 사이의 수직 거리
 
-        float degree = Mathf.Atan2(dy, dx) * Mathf.Rad2Deg;
-        characterRenderer.flipX = Mathf.Abs(degree) > 90f;
-        transform.rotation = Quaternion.Euler(0, 0, degree);
+        float degree = Mathf.Atan2(dy, dx) * Mathf.Rad2Deg; // 라디안 단위로 표현된 각도 계산
+        characterRenderer.flipX = Mathf.Abs(degree) > 90f; // 타워 좌우로 뒤집기
+        transform.rotation = Quaternion.Euler(0, 0, degree); // z축을 중심으로 degree만큼 회전 설정
     }
+
+    // 타원 공격 루프
     private IEnumerator AttackToTarget()
     {
         while (true)
@@ -177,7 +180,7 @@ public class Pesticide : MonoBehaviour
             }
 
             // 2. target이 공격 범위 안에 있는지 검사
-            float distance = Vector3.Distance(attackTarget.position, transform.position);
+            float distance = Vector3.Distance(attackTarget.position, transform.position); // 타워와 적 사이 거리
             if(distance > MinAttackRange)
             {
                 attackTarget = null;
@@ -186,7 +189,7 @@ public class Pesticide : MonoBehaviour
             }
 
             // 3. attackRate 시간만큼 대기
-            yield return new WaitForSeconds(MinAttackRange);
+            yield return new WaitForSeconds(MinAttackRange); // 공격 대기 시간: 공격속도 
 
             // 4. 공격
             PesticideAttack();

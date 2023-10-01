@@ -21,6 +21,7 @@ public class UIManager : MonoBehaviour
     public void PickTower(UIStore towerBtn)
     {
         this.ClickedBtn = towerBtn;
+        Hover_.Instance.Activate(towerBtn.Sprite);
     }
 
     // 타워 구매(Buy 버튼)
