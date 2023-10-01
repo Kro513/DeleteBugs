@@ -927,6 +927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerPerfab: {fileID: 2660729861532404988, guid: 5fbd33a0069ce62468d7bcc8fd686b24, type: 3}
+  sprite: {fileID: 21300000, guid: 4a283327f75f9474485a4a0d53d8e8d5, type: 3}
 --- !u!1 &304483618
 GameObject:
   m_ObjectHideFlags: 0
@@ -2203,6 +2204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerPerfab: {fileID: 0}
+  sprite: {fileID: 0}
 --- !u!1 &689382969
 GameObject:
   m_ObjectHideFlags: 0
@@ -2899,6 +2901,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerPerfab: {fileID: 2019595625821246295, guid: f1ceadd829db69a4f885529934b10864, type: 3}
+  sprite: {fileID: 21300000, guid: 98d59a2f3fb7b4943a94bed578d00c3e, type: 3}
 --- !u!1 &934157440
 GameObject:
   m_ObjectHideFlags: 0
@@ -3682,6 +3685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerPerfab: {fileID: 5690555718630223009, guid: 4fd800bb78578ec4792045217699a947, type: 3}
+  sprite: {fileID: 21300000, guid: 5fe410c14b3afc3458a325eb8d981fb2, type: 3}
 --- !u!1 &1240127151
 GameObject:
   m_ObjectHideFlags: 0

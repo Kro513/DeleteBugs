@@ -17,14 +17,12 @@ public class UIManager : MonoBehaviour
         Instance = this;
     }
 
-    // Ÿ�� ����(Buy ��ư)
     public void PickTower(UIStore towerBtn)
     {
         this.ClickedBtn = towerBtn;
         Hover_.Instance.Activate(towerBtn.Sprite);
     }
 
-    // Ÿ�� ����(Buy ��ư)
     public void BuyTower()
     {
         ClickedBtn = null;
