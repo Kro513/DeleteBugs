@@ -5,6 +5,7 @@ using UnityEngine;
 public class ObjectDetector : MonoBehaviour
 {
     [SerializeField] private TowerSpawner towerSpawner;
+    [SerializeField] private UIUpgrade uIUpgrade;
 
     private Camera mainCamera;
     private Ray ray;
@@ -28,6 +29,10 @@ public class ObjectDetector : MonoBehaviour
                 {
                     Debug.Log("hit");
                     towerSpawner.SpawnTower(hit.transform); // 타워 생성 함수 호출
+                }
+                else if (hit.transform.CompareTag("Tower"))
+                {
+                    uIUpgrade.OnUpgradeImg();
                 }
             }
         }

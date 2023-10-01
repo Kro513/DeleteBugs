@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class TowerSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject[] towerPrefab;
-
     public void SpawnTower(Transform tileTransform)
     {
         Tile tile = tileTransform.GetComponent<Tile>();
@@ -15,11 +13,14 @@ public class TowerSpawner : MonoBehaviour
         {
             return; // 타원 건설X
         }
+        if(UIManager.Instance.ClickedBtn != null)
+        {
+            tile.IsBulidTower = true; // 타원 건설되어 있음으로 설정
+            Instantiate(UIManager.Instance.ClickedBtn.TowerPrefab, tileTransform.position, Quaternion.identity); // 선택 위치 타워 생성
 
-        tile.IsBulidTower = true; // 타원 건설되어 있음으로 설정
-        /*GameObject newTower = //Instantiate(towerPrefab, tileTransform.position, Quaternion.identity); // 선택 위치 타워 생성
-        /*newTower.transform.SetParent(parentTransform);*/
-        
-        //Instantiate(towerPrefab[], tileTransform.position, Quaternion.identity); // 선택 위치 타워 생성
+            Hover_.Instance.Deactivate();
+
+            UIManager.Instance.BuyTower();
+        }
     }
 }
