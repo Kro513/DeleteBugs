@@ -11,13 +11,14 @@ public class Player : MonoBehaviour
     public int _maxHealth = 10;
     //public Text PlayerHPDisplay;
     public Image[] heartImages;
+    public Text GoldReserves;
 
     private void Awake()
     {
         _currentHp = _maxHealth;
         _Gold = 100;
         UpdateHealthUI();
-        
+        UpdateGoldUI();
     }
 
    
@@ -44,7 +45,7 @@ public class Player : MonoBehaviour
 
     }
 
-    public void UpdateHealthUI()
+    private void UpdateHealthUI()
     {
         //PlayerHPDisplay.text = "¸ñ¼û:" + _currentHp.ToString() + "/" + _maxHealth.ToString();
 
@@ -65,6 +66,23 @@ public class Player : MonoBehaviour
         _currentHp = Mathf.Clamp(_currentHp, 0, _maxHealth);
 
         UpdateHealthUI();
+    }
+
+    private void UpdateGoldUI()
+    {
+        GoldReserves.text = _Gold.ToString();
+    }
+
+    public void GetGold(int goldAmount)
+    {
+        _Gold += goldAmount;
+        UpdateGoldUI();
+    }
+
+    public void SpendGold(int goldAmount)
+    { 
+        _Gold -= goldAmount;
+        UpdateGoldUI();
     }
 
 }

@@ -13,7 +13,6 @@ public class TowerSpawner : MonoBehaviour
         {
             return; // 타원 건설X
         }
-
         if(UIManager.Instance.ClickedBtn != null)
         {
             tile.IsBulidTower = true; // 타원 건설되어 있음으로 설정
