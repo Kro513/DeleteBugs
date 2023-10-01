@@ -52,13 +52,13 @@ public class ObjectDetector : MonoBehaviour
                     Debug.Log("hit");
                     SpawnTower(hit.transform); // 타워 생성 함수 호출
                 }
-                else if (hit.transform.CompareTag("Tower")&& UIManager.Instance.ClickedBtn == null)
+                else if (hit.transform.CompareTag("Tower"))
                 {
                     uIUpgrade.OnUpgradeImg();
 
                     if (myTower != null)
                     {
-                        Debug.Log("click");
+                        Debug.Log("click1");
                         UIManager.Instance.SelectTower(myTower);
                     }
                     else

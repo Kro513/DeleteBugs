@@ -24,10 +24,10 @@ public class UIManager : Singleton<UIManager>
     }
     public void SelectTower(Tower tower)
     {
-        if (selectedTower != null) // 하나의 타워만 범위 선택 가능
+       /* if (selectedTower != null) // 하나의 타워만 범위 선택 가능
         {
             selectedTower.Select();
-        }
+        }*/
 
         selectedTower = tower;
         selectedTower.Select();
