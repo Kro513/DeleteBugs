@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class TowerSpawner : MonoBehaviour
 {
+    [SerializeField] private GameObject towerPrefab;
+    [SerializeField] private EnemySpawner enemySpawner;
+
     public void SpawnTower(Transform tileTransform)
     {
         Tile tile = tileTransform.GetComponent<Tile>();
@@ -16,7 +19,8 @@ public class TowerSpawner : MonoBehaviour
         if(UIManager.Instance.ClickedBtn != null)
         {
             tile.IsBulidTower = true; // 타원 건설되어 있음으로 설정
-            Instantiate(UIManager.Instance.ClickedBtn.TowerPrefab, tileTransform.position, Quaternion.identity); // 선택 위치 타워 생성
+            GameObject clone = Instantiate(UIManager.Instance.ClickedBtn.TowerPrefab, tileTransform.position, Quaternion.identity); // 선택 위치 타워 생성
+            clone.GetComponent<TowerWeapon>().Setup(enemySpawner);
 
             Hover_.Instance.Deactivate();
 

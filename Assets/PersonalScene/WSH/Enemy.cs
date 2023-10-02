@@ -11,11 +11,12 @@ public class Enemy : MonoBehaviour
     private EnemySpawner enemySpawner;
     //[SerializeField]
     //private int gold = 10;
-    
+
 
     public void Setup(EnemySpawner enemySpawner, Transform[] wayPoints)
     {
         movement2D = GetComponent<Movement2D>();
+        this.enemySpawner = enemySpawner;
 
         wayPointCount = wayPoints.Length;
         this.wayPoints = new Transform[wayPointCount];
@@ -60,8 +61,13 @@ public class Enemy : MonoBehaviour
         else
         {
             GameManager.Instance.player.GetDamage(1);
+            OnDie();
 
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
+    }
+    public void OnDie()
+    {
+        enemySpawner.DestoryEnemy(this);
     }
 }
