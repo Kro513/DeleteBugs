@@ -22,23 +22,5 @@ public class UIManager : Singleton<UIManager>
     {
         ClickedBtn = null;
     }
-    public void SelectTower(Tower tower)
-    {
-       /* if (selectedTower != null) // 하나의 타워만 범위 선택 가능
-        {
-            selectedTower.Select();
-        }*/
 
-        selectedTower = tower;
-        selectedTower.Select();
-
-    }
-    public void DeselectTower()
-    {
-        if (selectedTower != null)
-        {
-            selectedTower.Select();
-        }
-        selectedTower = null;
-    }
 }

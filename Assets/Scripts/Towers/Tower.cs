@@ -7,7 +7,21 @@ public class Tower : MonoBehaviour
     private SpriteRenderer mySpriteRenderer;
     private Enemy target;
 
+    public Enemy Target
+    {
+        get { return target; }
+    }
+
     private Queue<Enemy> enemies = new Queue<Enemy>();
+
+    [SerializeField] private float attackCooldown;
+
+    [SerializeField] private string projectileType;
+    [SerializeField] private float projectileSpeed;
+    public float ProjectileSpeed
+    {
+        get { return projectileSpeed; }
+    }
 
     void Start()
     {
@@ -16,7 +30,6 @@ public class Tower : MonoBehaviour
 
     void Update()
     {
-        Attack();
         Debug.Log(target);
     }
 
@@ -25,14 +38,7 @@ public class Tower : MonoBehaviour
         Debug.Log("click2");
         mySpriteRenderer.enabled = !mySpriteRenderer.enabled;
     }
-    private void Attack()
-    {
-        if(target == null && enemies.Count > 0)
-        {
-            target = enemies.Dequeue();
-        }
-    }
-
+   
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "Enemy")

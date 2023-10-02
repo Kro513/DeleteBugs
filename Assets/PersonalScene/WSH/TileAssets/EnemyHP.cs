@@ -43,4 +43,24 @@ public class EnemyHP : MonoBehaviour
         color.a = 1.0f;
         spriteRenderer.color = color;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Bullet")
+        {
+            currentHP--;
+            Destroy(collision.gameObject);
+        }
+
+        /*if (collision.tag == "Thunder")
+        {
+            currentHP--;
+            Destroy(collision.gameObject, 0.2f);
+        }
+*/
+        if (currentHP <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 }
