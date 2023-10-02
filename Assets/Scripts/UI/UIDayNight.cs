@@ -26,7 +26,7 @@ public class UIDayNight : MonoBehaviour
         // ¹ã UI ¼³Á¤
         public void SetNight(bool isActive)
         {
-            //UIManager.Instance.uiWaves.UpdateWaveUI();
+            UIManager.Instance.uiWaves.UpdateWaveUI();
             Moon.SetActive(isActive);
             Sun.SetActive(false);
         }
