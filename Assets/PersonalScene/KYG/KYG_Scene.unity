@@ -791,8 +791,9 @@ GameObject:
   - component: {fileID: 236914434}
   - component: {fileID: 236914433}
   - component: {fileID: 236914432}
+  - component: {fileID: 236914435}
   m_Layer: 5
-  m_Name: Buy_Btn
+  m_Name: BuyFlyFlap_Btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -862,7 +863,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 236914433}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1971296645}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: PickTower
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 236914435}
+          m_ObjectArgumentAssemblyTypeName: UIStore, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &236914433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -901,6 +914,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 236914430}
   m_CullTransparentMesh: 1
+--- !u!114 &236914435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236914430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a708a0f83fa15b0489060470ec04ac91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPerfab: {fileID: 2660729861532404988, guid: 5fbd33a0069ce62468d7bcc8fd686b24, type: 3}
 --- !u!1 &304483618
 GameObject:
   m_ObjectHideFlags: 0
@@ -2176,7 +2202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a708a0f83fa15b0489060470ec04ac91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  button: []
+  towerPerfab: {fileID: 0}
 --- !u!1 &689382969
 GameObject:
   m_ObjectHideFlags: 0
@@ -2650,7 +2676,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &875180381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2737,8 +2763,9 @@ GameObject:
   - component: {fileID: 876647681}
   - component: {fileID: 876647680}
   - component: {fileID: 876647679}
+  - component: {fileID: 876647682}
   m_Layer: 5
-  m_Name: Buy_Btn
+  m_Name: BuyPesticide_Btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2808,7 +2835,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 876647680}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1971296645}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: PickTower
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 876647682}
+          m_ObjectArgumentAssemblyTypeName: UIStore, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &876647680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2847,6 +2886,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 876647677}
   m_CullTransparentMesh: 1
+--- !u!114 &876647682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 876647677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a708a0f83fa15b0489060470ec04ac91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPerfab: {fileID: 2019595625821246295, guid: f1ceadd829db69a4f885529934b10864, type: 3}
 --- !u!1 &934157440
 GameObject:
   m_ObjectHideFlags: 0
@@ -3286,10 +3338,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed592c0ae390794398afc11330aba91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerPrefab:
-  - {fileID: 2660729861532404988, guid: 5fbd33a0069ce62468d7bcc8fd686b24, type: 3}
-  - {fileID: 2019595625821246295, guid: f1ceadd829db69a4f885529934b10864, type: 3}
-  - {fileID: 5690555718630223009, guid: 4fd800bb78578ec4792045217699a947, type: 3}
 --- !u!4 &1051757327
 Transform:
   m_ObjectHideFlags: 0
@@ -3498,8 +3546,9 @@ GameObject:
   - component: {fileID: 1198872375}
   - component: {fileID: 1198872374}
   - component: {fileID: 1198872373}
+  - component: {fileID: 1198872376}
   m_Layer: 5
-  m_Name: Buy_Btn
+  m_Name: BuyFlyTrap_Btn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3569,7 +3618,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1198872374}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1971296645}
+        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_MethodName: PickTower
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1198872376}
+          m_ObjectArgumentAssemblyTypeName: UIStore, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1198872374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3608,6 +3669,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1198872371}
   m_CullTransparentMesh: 1
+--- !u!114 &1198872376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1198872371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a708a0f83fa15b0489060470ec04ac91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerPerfab: {fileID: 5690555718630223009, guid: 4fd800bb78578ec4792045217699a947, type: 3}
 --- !u!1 &1240127151
 GameObject:
   m_ObjectHideFlags: 0
