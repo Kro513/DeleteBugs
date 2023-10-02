@@ -26,5 +26,5 @@ public struct Wave
 {
     public float spawmTime;
     public int maxEnemyCount;
-    public GameObject[] enmyPrefabs;
+    public GameObject[] enemyPrefabs;
 }
