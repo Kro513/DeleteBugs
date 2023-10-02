@@ -4,16 +4,13 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject enemyHPSliderPrefab; 
-    [SerializeField]
-    private Transform canvasTransform;
+    [SerializeField] private GameObject enemyHPSliderPrefab; 
+    [SerializeField] private Transform canvasTransform;
 
-
-    [SerializeField]
-    private Transform[] wayPoints;
-    [SerializeField]
-    private Wave currentWave;
+    [SerializeField] private GameObject enemyPrefab;
+    [SerializeField] private float spawnTime;
+    [SerializeField] private Transform[] wayPoints;
+    [SerializeField] private Wave currentWave;
     private List<Enemy> enemyList;
 
     public List<Enemy> EnemyList => enemyList;
@@ -60,5 +57,11 @@ public class EnemySpawner : MonoBehaviour
         sliderClone.GetComponent<SliderPositionAutoSetter>().Setup(enemy.transform);
 
         sliderClone.GetComponent<EnemyHPViewer>().Setup(enemy.GetComponent<EnemyHP>());
+    }
+
+    public void DestoryEnemy(Enemy enemy)
+    {
+        enemyList.Remove(enemy);
+        Destroy(enemy.gameObject);
     }
 }

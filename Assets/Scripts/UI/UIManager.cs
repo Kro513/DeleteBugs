@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIManager : MonoBehaviour
+public class UIManager : Singleton<UIManager>
 {
     [field: SerializeField] public UIMenu uIMenu { get; private set; }
     [field: SerializeField] public UIStore uIStore { get; private set; }
@@ -15,21 +15,12 @@ public class UIManager : MonoBehaviour
     public UIStore ClickedBtn { get; private set; }
 
 
-    public static UIManager Instance;
-
-    void Start()
-    {
-        Instance = this;
-    }
-
-    // Ÿ�� ����(Buy ��ư)
     public void PickTower(UIStore towerBtn)
     {
         this.ClickedBtn = towerBtn;
         Hover_.Instance.Activate(towerBtn.Sprite);
     }
 
-    // Ÿ�� ����(Buy ��ư)
     public void BuyTower()
     {
         ClickedBtn = null;
