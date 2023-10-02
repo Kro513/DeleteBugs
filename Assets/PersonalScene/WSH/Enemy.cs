@@ -48,6 +48,8 @@ public class Enemy : MonoBehaviour
         }
         else
         {
+            GameManager.Instance.player.GetDamage(1);
+
             Destroy(gameObject);
         }
     }

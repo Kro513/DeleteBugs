@@ -10,13 +10,12 @@ public class UIWaves : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        UpdateWaveUI(currentWave);
+        UpdateWaveUI();
     }
 
     // Update is called once per frame
-    public void UpdateWaveUI(int waveNumber)
+    public void UpdateWaveUI()
     {
-        currentWave = waveNumber;
         waveText.text= "Wave:" + (currentWave + 1);
     }
 }

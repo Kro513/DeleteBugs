@@ -27,4 +27,14 @@ public class UIPauseButton : MonoBehaviour
             Time.timeScale = isPaused ? 0 : 1;
         }
     }
+    public void ResumeGame()
+    {
+        if (PausePanel != null)
+        {
+            // Resume 버튼을 눌렀을 때 Pause 판넬을 비활성화하고 게임을 재개
+            isPaused = false;
+            PausePanel.SetActive(false);
+            Time.timeScale = 1; // 게임 로직을 다시 재개
+        }
+    }
 }

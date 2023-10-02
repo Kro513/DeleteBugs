@@ -249,6 +249,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 573129311088771011, guid: 532953b9991f73e47846a4662c88b0d6, type: 3}
+  enemyHPSliderPrefab: {fileID: 288340665757479719, guid: c477c874fe9fade4f9a89146732e7936, type: 3}
+  canvasTransform: {fileID: 1334880284}
   spawnTime: 3
   wayPoints:
   - {fileID: 448188501}
@@ -279,6 +281,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 2902749468420120274, guid: 706d69f97d9706146ac8e1b35b1422e8, type: 3}
+  enemyHPSliderPrefab: {fileID: 288340665757479719, guid: c477c874fe9fade4f9a89146732e7936, type: 3}
+  canvasTransform: {fileID: 1334880284}
   spawnTime: 2
   wayPoints:
   - {fileID: 448188501}
@@ -309,6 +313,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 9074976774318287808, guid: 373cbffe7e8d5ed48962a0b0c1850a50, type: 3}
+  enemyHPSliderPrefab: {fileID: 288340665757479719, guid: c477c874fe9fade4f9a89146732e7936, type: 3}
+  canvasTransform: {fileID: 1334880284}
   spawnTime: 5
   wayPoints:
   - {fileID: 448188501}
@@ -339,6 +345,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 3896670401668699404, guid: 6a2ac7ce04aec754ca6200a9f52a3928, type: 3}
+  enemyHPSliderPrefab: {fileID: 288340665757479719, guid: c477c874fe9fade4f9a89146732e7936, type: 3}
+  canvasTransform: {fileID: 1334880284}
   spawnTime: 10
   wayPoints:
   - {fileID: 448188501}
