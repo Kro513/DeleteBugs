@@ -8638,6 +8638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uIUpgrade: {fileID: 1604966547}
+  towerSpawner: {fileID: 1581765033}
 --- !u!4 &724576960
 Transform:
   m_ObjectHideFlags: 0
