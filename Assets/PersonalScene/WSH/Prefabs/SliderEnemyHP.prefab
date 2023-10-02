@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5594392851006999343}
   - component: {fileID: 7962969654819935575}
+  - component: {fileID: -8203275837303634059}
+  - component: {fileID: -3872784132602435340}
   m_Layer: 5
   m_Name: SliderEnemyHP
   m_TagString: Untagged
@@ -90,6 +92,31 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &-8203275837303634059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288340665757479719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a21e293967cd1e48bdf68170103b0b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: {x: 0, y: -20, z: 0}
+--- !u!114 &-3872784132602435340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288340665757479719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f5ad9750490ef448ae7ba9797d47827, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &450387072986480921
 GameObject:
   m_ObjectHideFlags: 0
