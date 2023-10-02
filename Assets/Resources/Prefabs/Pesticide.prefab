@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2006590224268117838}
   - component: {fileID: 4536869704505425254}
   - component: {fileID: 3752269479366264540}
-  - component: {fileID: 4640933864201157264}
+  - component: {fileID: 874788836482991310}
   m_Layer: 0
   m_Name: Pesticide
   m_TagString: Tower
@@ -35,7 +35,7 @@ Transform:
   m_Children:
   - {fileID: 4034009681953144464}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2926428628990717063
 SpriteRenderer:
@@ -139,7 +139,7 @@ MonoBehaviour:
   attackRate: 0.5
   attackRange: 2
   attackDamage: 1
---- !u!95 &4640933864201157264
+--- !u!95 &874788836482991310
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
