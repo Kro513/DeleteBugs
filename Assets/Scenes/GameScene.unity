@@ -3776,7 +3776,6 @@ MonoBehaviour:
   <uIMenu>k__BackingField: {fileID: 440858884}
   <uIStore>k__BackingField: {fileID: 1916893208}
   <uIUpgrade>k__BackingField: {fileID: 857931356}
-  <uiWaves>k__BackingField: {fileID: 2059702892}
   <uiDayNight>k__BackingField: {fileID: 143258208}
 --- !u!4 &1003931549
 Transform:
@@ -6441,6 +6440,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3fff99133c7f64a9fb42eaa3748eb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waveText: {fileID: 2059702889}
+  _currentWave: 0
   player: {fileID: 310113006}
 --- !u!4 &2074079251
 Transform:
