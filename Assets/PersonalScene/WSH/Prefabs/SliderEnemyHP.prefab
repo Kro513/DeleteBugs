@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5594392851006999343}
   - component: {fileID: 7962969654819935575}
-  - component: {fileID: -8203275837303634059}
-  - component: {fileID: -3872784132602435340}
+  - component: {fileID: 2158037079007943512}
+  - component: {fileID: -3626353389341687013}
   m_Layer: 5
   m_Name: SliderEnemyHP
   m_TagString: Untagged
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &-8203275837303634059
+--- !u!114 &2158037079007943512
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: {x: 0, y: -20, z: 0}
---- !u!114 &-3872784132602435340
+--- !u!114 &-3626353389341687013
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
