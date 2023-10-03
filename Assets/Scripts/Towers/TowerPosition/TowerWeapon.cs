@@ -20,7 +20,9 @@ public class TowerWeapon : MonoBehaviour
     private Transform attackTarget = null;
     private EnemySpawner enemySpawner;
 
-    public void Setup(EnemySpawner enemySpawner)
+	private SpriteRenderer characterRenderer;
+
+	public void Setup(EnemySpawner enemySpawner)
     {
         this.enemySpawner = enemySpawner;
 
@@ -44,9 +46,10 @@ public class TowerWeapon : MonoBehaviour
         float dx = attackTarget.position.x - transform.position.x;
         float dy = attackTarget.position.y - transform.position.y;
 
-        float degree = Mathf.Atan2(dy, dx) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0, 0, degree);
-    }
+		float degree = Mathf.Atan2(dy, dx) * Mathf.Rad2Deg;
+		characterRenderer.flipX = Mathf.Abs(degree) > 90f;
+		transform.rotation = Quaternion.Euler(0, 0, degree);
+	}
 
     private IEnumerator SearchTarget()
     {
