@@ -7,8 +7,8 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private GameObject enemyHPSliderPrefab; 
     [SerializeField] private Transform canvasTransform;
 
-    [SerializeField] private GameObject enemyPrefab;
-    [SerializeField] private float spawnTime;
+    //[SerializeField] private GameObject enemyPrefab;
+    //[SerializeField] private float spawnTime;
     [SerializeField] private Transform[] wayPoints;
     [SerializeField] private Wave currentWave;
     private List<Enemy> enemyList;
