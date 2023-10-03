@@ -20,7 +20,8 @@ public class TowerWeapon : MonoBehaviour
     private Transform attackTarget = null;
     private EnemySpawner enemySpawner;
 
-	private SpriteRenderer characterRenderer;
+	[SerializeField] private SpriteRenderer characterRenderer;
+    [SerializeField] private SpriteRenderer projectilePoint;
 
 	public void Setup(EnemySpawner enemySpawner)
     {
@@ -38,16 +39,16 @@ public class TowerWeapon : MonoBehaviour
     {
         if (attackTarget != null)
         {
-            RotateToTarget();
-        }
+			Vector2 direction = attackTarget.position - transform.position;
+			RotateToTarget(direction);
+		}
     }
-    private void RotateToTarget()
+    private void RotateToTarget(Vector2 direction)
     {
-        float dx = attackTarget.position.x - transform.position.x;
-        float dy = attackTarget.position.y - transform.position.y;
-
-		float degree = Mathf.Atan2(dy, dx) * Mathf.Rad2Deg;
-		characterRenderer.flipX = Mathf.Abs(degree) > 90f;
+        
+		float degree = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        projectilePoint.flipY = Mathf.Abs(degree) > 90f;
+        characterRenderer.flipX = projectilePoint.flipY;
 		transform.rotation = Quaternion.Euler(0, 0, degree);
 	}
 
