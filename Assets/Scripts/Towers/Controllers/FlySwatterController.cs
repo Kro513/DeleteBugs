@@ -23,26 +23,15 @@ public class FlySwatterController : MonoBehaviour
 		HandleAttackDelay();
 	}
 
-	private void HandleAttackDelay()
+	public void HandleAttackDelay()
 	{
-		if (Stats.flySwatterStats.attackSO == null)
-			return;
-
-
-		if (_timeSinceLastAttack <= Stats.flySwatterStats.attackSO.delay)
-		{
-			_timeSinceLastAttack += Time.deltaTime;
-		}
-
-		if (IsAttacking && _timeSinceLastAttack > Stats.flySwatterStats.attackSO.delay)
-		{
-			_timeSinceLastAttack = 0;
-			CallAttackEvent(Stats.flySwatterStats.attackSO);
-		}
+		Debug.Log("1");
+		CallAttackEvent(Stats.flySwatterStats.attackSO);
 	}
 
-	private void CallAttackEvent(FlySwatterSO attackSO)
+	public void CallAttackEvent(FlySwatterSO attackSO)
 	{
-		OnAttackEvent?.Invoke(attackSO);
+		Debug.Log("3");
+		OnAttackEvent.Invoke(attackSO);
 	}
 }

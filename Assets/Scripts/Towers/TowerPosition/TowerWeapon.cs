@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
 public enum WeaponState
@@ -23,6 +25,10 @@ public class TowerWeapon : MonoBehaviour
 	[SerializeField] private SpriteRenderer characterRenderer;
     [SerializeField] private SpriteRenderer projectilePoint;
 
+	public event Action<FlySwatterSO> OnAttackEvent;
+
+	protected FlySwatter Stats { get; private set; }
+
 	public void Setup(EnemySpawner enemySpawner)
     {
         this.enemySpawner = enemySpawner;
@@ -35,24 +41,28 @@ public class TowerWeapon : MonoBehaviour
         weaponState = newState;
         StartCoroutine(weaponState.ToString());
     }
-    private void Update()
-    {
-        if (attackTarget != null)
-        {
-			Vector2 direction = attackTarget.position - transform.position;
-			RotateToTarget(direction);
-		}
-    }
-    private void RotateToTarget(Vector2 direction)
-    {
-        
-		float degree = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        projectilePoint.flipY = Mathf.Abs(degree) > 90f;
-        characterRenderer.flipX = projectilePoint.flipY;
-		transform.rotation = Quaternion.Euler(0, 0, degree);
-	}
 
-    private IEnumerator SearchTarget()
+	
+	//   private void Update()
+	//   {
+	//       if (attackTarget != null)
+	//       {
+
+	//		RotateToTarget();
+	//	}
+	//   }
+	//   private void RotateToTarget()
+	//   {
+	//       //float dy = attackTarget.position.y - transform.position.y;
+
+	//       float dy = 0;
+	//	float dx = attackTarget.position.x - transform.position.x;
+
+	//	float degree = Mathf.Atan2(dx, dy) * Mathf.Rad2Deg;
+	//	transform.rotation = Quaternion.Euler(0, 0, degree);
+	//}
+
+	private IEnumerator SearchTarget()
     {
         while (true)
         {
@@ -93,9 +103,9 @@ public class TowerWeapon : MonoBehaviour
                 break;
             }
 
-            yield return new WaitForSeconds(attackRate);
+			yield return new WaitForSeconds(attackRate);
 
-            SpawnProjectile();
+			SpawnProjectile();
         }
     }
     private void SpawnProjectile()

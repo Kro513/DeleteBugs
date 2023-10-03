@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -8226819059468393710}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Enemy
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6075b34820f678e47846563ebabf7868, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2
+  moveSpeed: 0.5
   moveDirection: {x: 0, y: 0, z: 0}
 --- !u!114 &7092170666630201300
 MonoBehaviour:
@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8a1dc7712ac84647b5f34d0618f3622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 0
+  maxHP: 70
 --- !u!50 &-476156730458452424
 Rigidbody2D:
   serializedVersion: 4
