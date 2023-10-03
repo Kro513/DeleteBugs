@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
     
-    public int _Gold;
+    //public int _Gold;
     public int _currentHp;
     public int _maxHealth = 10;
     //public Text PlayerHPDisplay;
@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         _currentHp = _maxHealth;
-        _Gold = 100;
+        //_Gold = 100;
         UpdateHealthUI();
         UpdateGoldUI();
     }
@@ -70,18 +70,18 @@ public class Player : MonoBehaviour
 
     private void UpdateGoldUI()
     {
-        GoldReserves.text = _Gold.ToString();
+        GoldReserves.text = GameManager.Instance.Gold.ToString();
     }
 
     public void GetGold(int goldAmount)
     {
-        _Gold += goldAmount;
+        GameManager.Instance.Gold += goldAmount;
         UpdateGoldUI();
     }
 
     public void SpendGold(int goldAmount)
-    { 
-        _Gold -= goldAmount;
+    {
+        GameManager.Instance.Gold -= goldAmount;
         UpdateGoldUI();
     }
 

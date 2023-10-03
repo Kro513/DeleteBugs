@@ -28,6 +28,26 @@ public class GameManager : MonoBehaviour
     public WaveSystem waveSystem;
     public UIDayNight uiDayNight;
 
+   
+    private int gold;
+    [SerializeField] private Text goldTxt;
+    public int Gold
+    {
+        get
+        {
+            return gold;
+        }
+        set
+        {
+            this.gold = value;
+            this.goldTxt.text = value.ToString();
+        }
+    }
+
+    void Start()
+    {
+        Gold = 100;
+    }
     public void UpdateWaveUI()
     {
         _currentWave++;

@@ -8,6 +8,7 @@ public class UIStore : MonoBehaviour
 {
     [SerializeField] private GameObject towerPerfab;
     [SerializeField] private Sprite sprite;
+    [SerializeField] private int gold;
 
     public GameObject TowerPrefab
     {
