@@ -11,11 +11,12 @@ public class UIDayNight : MonoBehaviour
 
         void Start()
         {
-            
+        SoundManager.instance.PlayDayMusic(); // ³· »óÅÂ¿¡¼­´Â ³· ºê±Ý Àç»ý
+
         }
 
-        // ³· UI ¼³Á¤
-        public void SetDay(bool isActive)
+    // ³· UI ¼³Á¤
+    public void SetDay(bool isActive)
         {
             Sun.SetActive(isActive);
             Moon.SetActive(false);

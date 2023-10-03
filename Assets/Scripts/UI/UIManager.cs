@@ -11,6 +11,7 @@ public class UIManager : Singleton<UIManager>
     [field: SerializeField] public UIDayNight uiDayNight { get; private set; }
 
     public UIStore ClickedBtn { get; set; }
+    public AudioClip clip;
 
     private int gold;
     [SerializeField] private Text goldTxt;
@@ -49,8 +50,10 @@ public class UIManager : Singleton<UIManager>
         {
             Gold -= ClickedBtn.Price;
             Hover_.Instance.Deactivate();
+            SoundManager.instance.SFXPlay("Coin", clip);
+
         }
-        
+
     }
 
     public void GetGold(int goldAmount)

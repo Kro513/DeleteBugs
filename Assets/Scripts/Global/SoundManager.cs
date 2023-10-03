@@ -15,7 +15,7 @@ public class SoundManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(instance);
-
+            BgSoundPlay(bglist[2]);
         }
         else
         {
@@ -49,5 +49,14 @@ public class SoundManager : MonoBehaviour
     public void PlayNightMusic()
     {
         BgSoundPlay(bglist[1]); // nightMusic는 밤 브금 AudioClip입니다.
+    }
+
+    public void Victory()
+    {
+        BgSoundPlay(bglist[3]);
+    }
+    public void Defeated()
+    {
+        BgSoundPlay(bglist[4]);
     }
 }

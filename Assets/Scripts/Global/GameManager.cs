@@ -45,5 +45,6 @@ public class GameManager : MonoBehaviour
 	private void GameClear()
 	{
         GameClearUI.SetActive(true);
+        SoundManager.instance.Victory();
 	}
 }
