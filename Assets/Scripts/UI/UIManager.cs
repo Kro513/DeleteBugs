@@ -34,7 +34,7 @@ public class UIManager : Singleton<UIManager>
 
     public void PickTower(UIStore towerBtn)
     {
-        if (Gold >= towerBtn.Gold)
+        if (Gold >= towerBtn.Price)
         {
             this.ClickedBtn = towerBtn;
             Hover_.Instance.Activate(towerBtn.Sprite);
@@ -45,9 +45,9 @@ public class UIManager : Singleton<UIManager>
     public void BuyTower()
     {
         //ClickedBtn = null;
-        if (Gold >= ClickedBtn.Gold)
+        if (Gold >= ClickedBtn.Price)
         {
-            Gold -= ClickedBtn.Gold;
+            Gold -= ClickedBtn.Price;
             Hover_.Instance.Deactivate();
         }
         
