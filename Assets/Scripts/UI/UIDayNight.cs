@@ -25,7 +25,7 @@ public class UIDayNight : MonoBehaviour
             {
             SoundManager.instance.PlayDayMusic(); // 낮 상태에서는 낮 브금 재생
             }
-    }
+        }
 
         // 밤 UI 설정
         public void SetNight(bool isActive)
