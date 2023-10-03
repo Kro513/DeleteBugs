@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
+    public Text waveText;
 
     public static GameManager Instance
     {
@@ -21,6 +23,12 @@ public class GameManager : MonoBehaviour
             return instance;
         }
     }
-
+    public int _currentWave = 0;
     public Player player;
+
+    public void UpdateWaveUI()
+    {
+        _currentWave++;
+        waveText.text = "Wave:" + (_currentWave);
+    }
 }

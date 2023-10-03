@@ -21,12 +21,14 @@ public class UIDayNight : MonoBehaviour
         {
             Sun.SetActive(isActive);
             Moon.SetActive(false);
+            int _currentWave = GameManager.Instance._currentWave;
+            GameManager.Instance.player.GetGold(_currentWave * 100);
         }
 
         // ¹ã UI ¼³Á¤
         public void SetNight(bool isActive)
         {
-            UIManager.Instance.uiWaves.UpdateWaveUI();
+            GameManager.Instance.UpdateWaveUI();
             Moon.SetActive(isActive);
             Sun.SetActive(false);
         }
