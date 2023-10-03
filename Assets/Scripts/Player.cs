@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     //public Text PlayerHPDisplay;
     public Image[] heartImages;
 
+    public AudioClip clip;
+
     private void Awake()
     {
         _currentHp = _maxHealth;
@@ -24,6 +26,8 @@ public class Player : MonoBehaviour
     {
         _currentHp -= damage;
         UpdateHealthUI();
+
+        SoundManager.instance.SFXPlay("BreakingSound", clip);
 
         if (_currentHp == 0)
         {
