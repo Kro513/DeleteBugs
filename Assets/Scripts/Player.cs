@@ -10,13 +10,10 @@ public class Player : MonoBehaviour
     //public Text PlayerHPDisplay;
     public Image[] heartImages;
 
-    public AudioClip clip;
+	[SerializeField] private GameObject GameOverUI;
 
-    [SerializeField] private GameObject GameOverUI;
-
-
+	public AudioClip clip;
 	private void Awake()
-
     {
         _currentHp = _maxHealth;
         UpdateHealthUI();
