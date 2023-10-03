@@ -4939,6 +4939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed592c0ae390794398afc11330aba91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  towerTemplate: {fileID: 11400000, guid: 9ce7ae39aabe31d4aa4821210eae6c44, type: 2}
   enemySpawner: {fileID: 215575855}
 --- !u!4 &1191441725
 Transform:

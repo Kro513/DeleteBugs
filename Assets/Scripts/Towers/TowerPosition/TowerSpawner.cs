@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TowerSpawner : MonoBehaviour
 {
-    //[SerializeField] private GameObject towerPrefab;
+    [SerializeField] private TowerTemplate towerTemplate;
     [SerializeField] private EnemySpawner enemySpawner;
 
     public void SpawnTower(Transform tileTransform)
