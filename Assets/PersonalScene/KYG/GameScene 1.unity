@@ -1808,7 +1808,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4685a9b4ff03fd43b2819fd5cb684a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _Gold: 0
   _currentHp: 0
   _maxHealth: 10
   heartImages:
@@ -1822,7 +1821,6 @@ MonoBehaviour:
   - {fileID: 1679251882}
   - {fileID: 189669723}
   - {fileID: 518957095}
-  GoldReserves: {fileID: 995108748}
 --- !u!4 &310113007
 Transform:
   m_ObjectHideFlags: 0
@@ -4616,6 +4614,7 @@ MonoBehaviour:
   <uIStore>k__BackingField: {fileID: 1866238576}
   <uIUpgrade>k__BackingField: {fileID: 855329632}
   <uiDayNight>k__BackingField: {fileID: 143258208}
+  goldTxt: {fileID: 0}
 --- !u!4 &1003931549
 Transform:
   m_ObjectHideFlags: 0
@@ -4941,7 +4940,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ed592c0ae390794398afc11330aba91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerPrefab: {fileID: 0}
   enemySpawner: {fileID: 215575855}
 --- !u!4 &1191441725
 Transform:
@@ -13447,6 +13445,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerPerfab: {fileID: 2019595625821246295, guid: f1ceadd829db69a4f885529934b10864, type: 3}
   sprite: {fileID: 21300000, guid: 98d59a2f3fb7b4943a94bed578d00c3e, type: 3}
+  price: 0
+  priceTxt: {fileID: 0}
 --- !u!114 &1574647767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14273,6 +14273,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerPerfab: {fileID: 0}
   sprite: {fileID: 0}
+  price: 0
+  priceTxt: {fileID: 0}
 --- !u!114 &1866238577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14366,6 +14368,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerPerfab: {fileID: 3887320874434389161, guid: 7d3084ac03c4e3c48acb2c70a1b8e112, type: 3}
   sprite: {fileID: 21300000, guid: 5fe410c14b3afc3458a325eb8d981fb2, type: 3}
+  price: 0
+  priceTxt: {fileID: 0}
 --- !u!114 &1898346208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15339,6 +15343,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerPerfab: {fileID: 6057686338920222205, guid: a25a9e45c601f2a4c83983d823b3ced4, type: 3}
   sprite: {fileID: 21300000, guid: 4a283327f75f9474485a4a0d53d8e8d5, type: 3}
+  price: 0
+  priceTxt: {fileID: 0}
 --- !u!114 &2114548355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15463,11 +15469,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6214977947212738966, guid: 3beed1f45aff2854794c0df919be81dd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.125
+      value: 1.12
       objectReference: {fileID: 0}
     - target: {fileID: 6214977947212738966, guid: 3beed1f45aff2854794c0df919be81dd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.375
+      value: -3.38
       objectReference: {fileID: 0}
     - target: {fileID: 6214977947212738966, guid: 3beed1f45aff2854794c0df919be81dd, type: 3}
       propertyPath: m_LocalPosition.z
