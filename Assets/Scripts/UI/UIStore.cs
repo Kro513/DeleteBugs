@@ -8,6 +8,8 @@ public class UIStore : MonoBehaviour
 {
     [SerializeField] private GameObject towerPerfab;
     [SerializeField] private Sprite sprite;
+    [SerializeField] private int price;
+    [SerializeField] private TMP_Text priceTxt;
 
     public GameObject TowerPrefab
     {
@@ -23,5 +25,18 @@ public class UIStore : MonoBehaviour
         {
             return sprite;
         }
+    }
+
+    public int Price
+    {
+        get
+        {
+            return price;
+        }
+    }
+
+    private void Start()
+    {
+        priceTxt.text = price.ToString();
     }
 }

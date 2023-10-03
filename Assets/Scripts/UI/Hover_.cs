@@ -26,5 +26,7 @@ public class Hover_ : Singleton<Hover_>
     public void Deactivate()
     {
         spriteRenderer.enabled = false;
+
+        UIManager.Instance.ClickedBtn = null;
     }
 }

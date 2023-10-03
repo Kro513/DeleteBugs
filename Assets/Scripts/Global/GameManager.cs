@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     public WaveSystem waveSystem;
     public UIDayNight uiDayNight;
 
+   
     public void UpdateWaveUI()
     {
         _currentWave++;
