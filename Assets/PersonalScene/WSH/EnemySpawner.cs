@@ -44,6 +44,7 @@ public class EnemySpawner : MonoBehaviour
 
             yield return new WaitForSeconds(currentWave.spawmTime);
         }
+        GameManager.Instance.uiDayNight.SetDay(true);
     }
 
     private void SpawnEnemyHPSlider(GameObject enemy)
