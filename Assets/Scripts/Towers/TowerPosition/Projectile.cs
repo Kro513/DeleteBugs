@@ -14,11 +14,11 @@ public class Projectile : MonoBehaviour
         this.target = target;
         this.damage = damage;
     }
-    void Start()
-    {
-        movement2D = GetComponent<Movement2D>();
-        this.target = target;
-    }
+    //void Start()
+    //{
+    //    movement2D = GetComponent<Movement2D>();
+    //    this.target = target;
+    //}
 
     // Update is called once per frame
     void Update()

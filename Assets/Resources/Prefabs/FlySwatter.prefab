@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6374859203275140293}
   - component: {fileID: 4079523785046653670}
-  - component: {fileID: 2164280231768525375}
   - component: {fileID: 6404161935921099902}
   - component: {fileID: 3875850202816585720}
+  - component: {fileID: 4222658399254767662}
   m_Layer: 0
-  m_Name: FlySwatter_Anim
+  m_Name: FlySwatter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,9 +31,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4529485547771500221}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4079523785046653670
 SpriteRenderer:
@@ -87,22 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2164280231768525375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6057686338920222205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ee040cad82c7784f80b4fa336d2c4ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baseStats:
-    statsChangeType: 0
-    attackSO: {fileID: 0}
-  statsModifiers: []
 --- !u!95 &6404161935921099902
 Animator:
   serializedVersion: 5
@@ -136,3 +121,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa2f342cf81a7344a91be4e303928b33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4222658399254767662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6057686338920222205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9da323a488196bc49afa5fd93f33af96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 9108104924641087367, guid: 4ce574c8bbb4e8943b6829d040fa1817, type: 3}
+  spawnPoint: {fileID: 4529485547771500221}
+  attackRate: 0.5
+  attackRange: 2
+  attackDamage: 1
+--- !u!1 &8573973211810220660
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4529485547771500221}
+  m_Layer: 0
+  m_Name: ProjectilePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4529485547771500221
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8573973211810220660}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.277, y: -0.645, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6374859203275140293}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
