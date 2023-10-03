@@ -20,7 +20,7 @@ public class UIDayNight : MonoBehaviour
             Sun.SetActive(isActive);
             Moon.SetActive(false);
             int _currentWave = GameManager.Instance._currentWave;
-            GameManager.Instance.player.GetGold(_currentWave * 100);
+            UIManager.Instance.GetGold(_currentWave * 100);
             
         }
 

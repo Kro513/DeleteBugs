@@ -48,8 +48,7 @@ public class EnemySpawner : MonoBehaviour
         {
             yield return null;
         }
-
-        Debug.Log("Wave clear");
+        Debug.Log("wave clear");
         GameManager.Instance.uiDayNight.SetDay(true);
     }
 

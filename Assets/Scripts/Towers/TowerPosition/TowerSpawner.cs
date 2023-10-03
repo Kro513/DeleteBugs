@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TowerSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject towerPrefab;
+    //[SerializeField] private GameObject towerPrefab;
     [SerializeField] private EnemySpawner enemySpawner;
 
     public void SpawnTower(Transform tileTransform)
@@ -22,9 +22,8 @@ public class TowerSpawner : MonoBehaviour
             GameObject clone = Instantiate(UIManager.Instance.ClickedBtn.TowerPrefab, tileTransform.position, Quaternion.identity); // 선택 위치 타워 생성
             clone.GetComponent<TowerWeapon>().Setup(enemySpawner);
 
-            Hover_.Instance.Deactivate();
-
             UIManager.Instance.BuyTower();
+            Hover_.Instance.Deactivate();
         }
     }
 }
