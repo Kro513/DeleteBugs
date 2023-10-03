@@ -2091,7 +2091,7 @@ GameObject:
   - component: {fileID: 335503365}
   - component: {fileID: 335503364}
   m_Layer: 5
-  m_Name: Gold_Img
+  m_Name: GoldImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2688,9 +2688,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '20
-
-'
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2723,7 +2721,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -3195,7 +3193,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 40
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3228,7 +3226,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -4494,7 +4492,7 @@ GameObject:
   - component: {fileID: 995108749}
   - component: {fileID: 995108748}
   m_Layer: 5
-  m_Name: PlayerGold_Txt
+  m_Name: GoldReserves
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4517,7 +4515,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -41.8, y: -100}
+  m_AnchoredPosition: {x: -34, y: -100}
   m_SizeDelta: {x: 60, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &995108748
@@ -4542,18 +4540,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 16
+    m_FontSize: 14
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 1
+    m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 1
+    m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: New Text
 --- !u!222 &995108749
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4596,7 +4594,7 @@ MonoBehaviour:
   <uIStore>k__BackingField: {fileID: 1866238576}
   <uIUpgrade>k__BackingField: {fileID: 855329632}
   <uiDayNight>k__BackingField: {fileID: 143258208}
-  goldTxt: {fileID: 995108748}
+  goldTxt: {fileID: 0}
 --- !u!4 &1003931549
 Transform:
   m_ObjectHideFlags: 0
@@ -5553,7 +5551,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerSpawner: {fileID: 1191441724}
-  uIUpgrade: {fileID: 855329632}
+  uIUpgrade: {fileID: 0}
 --- !u!4 &1276249603
 Transform:
   m_ObjectHideFlags: 0
@@ -5977,7 +5975,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -14253,8 +14251,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a708a0f83fa15b0489060470ec04ac91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerPerfab: {fileID: 7728443327545619222, guid: cef584c97f540a94ab89d1c9ca307d3a, type: 3}
-  sprite: {fileID: 21300000, guid: 56b679be3fe59ef4ebf085894c52e495, type: 3}
+  towerPerfab: {fileID: 0}
+  sprite: {fileID: 0}
   gold: 0
 --- !u!114 &1866238577
 MonoBehaviour:
@@ -15020,7 +15018,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 30
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -15053,7 +15051,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -15321,7 +15319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a708a0f83fa15b0489060470ec04ac91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  towerPerfab: {fileID: 2019595625821246295, guid: f1ceadd829db69a4f885529934b10864, type: 3}
+  towerPerfab: {fileID: 2660729861532404988, guid: 5fbd33a0069ce62468d7bcc8fd686b24, type: 3}
   sprite: {fileID: 21300000, guid: 4a283327f75f9474485a4a0d53d8e8d5, type: 3}
   gold: 0
 --- !u!114 &2114548355
