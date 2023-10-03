@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
     }
     public int _currentWave = 0;
     public Player player;
+    public WaveSystem waveSystem;
+    public UIDayNight uiDayNight;
 
     public void UpdateWaveUI()
     {

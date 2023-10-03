@@ -11,8 +11,6 @@ public class UIDayNight : MonoBehaviour
 
         void Start()
         {
-            // 초기 설정
-            SetDay(true); // 낮 아이콘 표시
             
         }
 
@@ -23,12 +21,14 @@ public class UIDayNight : MonoBehaviour
             Moon.SetActive(false);
             int _currentWave = GameManager.Instance._currentWave;
             GameManager.Instance.player.GetGold(_currentWave * 100);
+            
         }
 
         // 밤 UI 설정
         public void SetNight(bool isActive)
         {
             GameManager.Instance.UpdateWaveUI();
+            GameManager.Instance.waveSystem.StartWave();
             Moon.SetActive(isActive);
             Sun.SetActive(false);
         }
