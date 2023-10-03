@@ -44,11 +44,13 @@ public class EnemySpawner : MonoBehaviour
 
             yield return new WaitForSeconds(currentWave.spawmTime);
         }
-        if (enemyList == null)
+        while (enemyList.Count > 0)
         {
-            Debug.Log("wave clear");
-            GameManager.Instance.uiDayNight.SetDay(true);
+            yield return null;
         }
+
+        Debug.Log("Wave clear");
+        GameManager.Instance.uiDayNight.SetDay(true);
     }
 
     private void SpawnEnemyHPSlider(GameObject enemy)
