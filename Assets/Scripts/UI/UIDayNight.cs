@@ -21,8 +21,11 @@ public class UIDayNight : MonoBehaviour
             Moon.SetActive(false);
             int _currentWave = GameManager.Instance._currentWave;
             UIManager.Instance.GetGold(_currentWave * 100);
-            
-        }
+            if (isActive)
+            {
+            SoundManager.instance.PlayDayMusic(); // 낮 상태에서는 낮 브금 재생
+            }
+    }
 
         // 밤 UI 설정
         public void SetNight(bool isActive)
@@ -31,7 +34,12 @@ public class UIDayNight : MonoBehaviour
             GameManager.Instance.waveSystem.StartWave();
             Moon.SetActive(isActive);
             Sun.SetActive(false);
+            if (isActive)
+            {
+            SoundManager.instance.PlayNightMusic(); // 밤 상태에서는 밤 브금 재생
+            }
         }
+
     
 
 }
