@@ -12,6 +12,8 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private Transform[] wayPoints;
     [SerializeField] private Wave currentWave;
     private List<Enemy> enemyList;
+    private GameManager _currentWave;
+
 
     public List<Enemy> EnemyList => enemyList;
 

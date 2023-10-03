@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
     public Text waveText;
+    public GameObject GameClearUI;
 
     public static GameManager Instance
     {
@@ -33,5 +35,15 @@ public class GameManager : MonoBehaviour
     {
         _currentWave++;
         waveText.text = "Wave:" + (_currentWave);
+
+        if(_currentWave > 5)
+        {
+            GameClear();
+        }
     }
+
+	private void GameClear()
+	{
+        GameClearUI.SetActive(true);
+	}
 }

@@ -12,7 +12,11 @@ public class Player : MonoBehaviour
 
     public AudioClip clip;
 
-    private void Awake()
+    [SerializeField] private GameObject GameOverUI;
+
+
+	private void Awake()
+
     {
         _currentHp = _maxHealth;
         UpdateHealthUI();
@@ -31,7 +35,7 @@ public class Player : MonoBehaviour
 
         if (_currentHp == 0)
         {
-            Debug.Log("게임 오버!");
+            GameOverUI.SetActive(true);
             //게임 오버 UI 출력
             //게임오버 이펙트
             //사운드 출력
