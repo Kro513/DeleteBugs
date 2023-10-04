@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    private int wayPointCount;
-    private Transform[] wayPoints;
-    private int currentIndex = 0;
-    private Movement2D movement2D;
+    protected int wayPointCount;
+    protected Transform[] wayPoints;
+    protected int currentIndex = 0;
+    protected Movement2D movement2D;
     private EnemySpawner enemySpawner;
     //[SerializeField]
     //private int gold = 10;
@@ -42,7 +43,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void NextMoveTo()
+    protected virtual void NextMoveTo()
     {
         if (currentIndex < wayPointCount - 1)
         {

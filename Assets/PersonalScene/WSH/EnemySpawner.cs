@@ -19,7 +19,7 @@ public class EnemySpawner : MonoBehaviour
 
     public List<Enemy> EnemyList => enemyList;
 
-    private void Awake()
+	private void Awake()
     {
         enemyList = new List<Enemy>();
     }
