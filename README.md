@@ -1,7 +1,7 @@
-# DeleteBugs
+![header](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2&height=300&section=header&text=DeleteBug&fontSize=90&fontColor=2D2727)
  https://teamsparta.notion.site/02-2-b1b44f2e5f1d437c9dab0c05f24807d4
 
-해충 디펜스
+해충 디펜스 (DeleteBug)
 
  ## :one: 프로젝트 소개
 
