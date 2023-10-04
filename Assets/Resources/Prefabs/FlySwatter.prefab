@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 6374859203275140293}
   - component: {fileID: 4079523785046653670}
   - component: {fileID: 6404161935921099902}
-  - component: {fileID: 4222658399254767662}
-  - component: {fileID: 748232080419863551}
+  - component: {fileID: -9040089142594319176}
   m_Layer: 0
   m_Name: FlySwatter
   m_TagString: Untagged
@@ -109,7 +108,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4222658399254767662
+--- !u!114 &-9040089142594319176
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,28 +117,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 6057686338920222205}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9da323a488196bc49afa5fd93f33af96, type: 3}
+  m_Script: {fileID: 11500000, guid: 5bf442b54e1bc984abec77e97a6d05e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 9108104924641087367, guid: 4ce574c8bbb4e8943b6829d040fa1817, type: 3}
   spawnPoint: {fileID: 4529485547771500221}
-  attackRate: 0.5
-  attackRange: 2
-  attackDamage: 1
-  characterRenderer: {fileID: 4079523785046653670}
-  projectilePoint: {fileID: 8400819927038311243}
---- !u!114 &748232080419863551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6057686338920222205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa2f342cf81a7344a91be4e303928b33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  attackRate: 3
+  attackRange: 3
+  attackDamage: 3
 --- !u!1 &8573973211810220660
 GameObject:
   m_ObjectHideFlags: 0

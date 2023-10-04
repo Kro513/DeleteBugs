@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 
-public enum WeaponState
+public enum TowerWeaponState
 {
     SearchTarget = 0,
     AttackToTarget
@@ -12,55 +12,30 @@ public enum WeaponState
 
 public class TowerWeapon : MonoBehaviour
 {
-    [SerializeField] private GameObject projectilePrefab;
-    [SerializeField] private Transform spawnPoint;
-    [SerializeField] private float attackRate = 0.5f;
-    [SerializeField] private float attackRange = 2.0f;
-    [SerializeField] private int attackDamage = 1;
+    [SerializeField] protected GameObject projectilePrefab;
+    [SerializeField] protected Transform spawnPoint;
+    [SerializeField] protected float attackRate;
+    [SerializeField] protected float attackRange;
+    [SerializeField] protected int attackDamage;
 
-    private WeaponState weaponState = WeaponState.SearchTarget;
-    private Transform attackTarget = null;
-    private EnemySpawner enemySpawner;
-
-	[SerializeField] private SpriteRenderer characterRenderer;
-    [SerializeField] private SpriteRenderer projectilePoint;
+	protected TowerWeaponState weaponState = TowerWeaponState.SearchTarget;
+	protected Transform attackTarget = null;
+	protected EnemySpawner enemySpawner;
 
 	public event Action<FlySwatterSO> OnAttackEvent;
-
-	protected FlySwatter Stats { get; private set; }
 
 	public void Setup(EnemySpawner enemySpawner)
     {
         this.enemySpawner = enemySpawner;
 
-        ChangeState(WeaponState.SearchTarget);
+        ChangeState(TowerWeaponState.SearchTarget);
     }
-    public void ChangeState(WeaponState newState)
+    public void ChangeState(TowerWeaponState newState)
     {
         StopCoroutine(weaponState.ToString());
         weaponState = newState;
         StartCoroutine(weaponState.ToString());
     }
-
-	
-	//   private void Update()
-	//   {
-	//       if (attackTarget != null)
-	//       {
-
-	//		RotateToTarget();
-	//	}
-	//   }
-	//   private void RotateToTarget()
-	//   {
-	//       //float dy = attackTarget.position.y - transform.position.y;
-
-	//       float dy = 0;
-	//	float dx = attackTarget.position.x - transform.position.x;
-
-	//	float degree = Mathf.Atan2(dx, dy) * Mathf.Rad2Deg;
-	//	transform.rotation = Quaternion.Euler(0, 0, degree);
-	//}
 
 	private IEnumerator SearchTarget()
     {
@@ -79,19 +54,19 @@ public class TowerWeapon : MonoBehaviour
             }
             if (attackTarget != null)
             {
-                ChangeState(WeaponState.AttackToTarget);
+                ChangeState(TowerWeaponState.AttackToTarget);
             }
             yield return null;
         }
     }
 
-    private IEnumerator AttackToTarget()
+	private IEnumerator AttackToTarget()
     {
         while (true)
         {
             if (attackTarget == null)
             {
-                ChangeState(WeaponState.SearchTarget);
+                ChangeState(TowerWeaponState.SearchTarget);
                 break;
             }
 
@@ -99,7 +74,7 @@ public class TowerWeapon : MonoBehaviour
             if (distance > attackRange)
             {
                 attackTarget = null;
-                ChangeState(WeaponState.SearchTarget);
+                ChangeState(TowerWeaponState.SearchTarget);
                 break;
             }
 
