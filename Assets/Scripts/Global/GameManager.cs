@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
 	public void GameClear()
 	{
         GameClearUI.SetActive(true);
-        uIPuaseButton.TimePaused();
+        Time.timeScale = 0f;
         SoundManager.instance.Victory();
         
 

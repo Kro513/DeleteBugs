@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    
+
     public int _currentHp;
     public int _maxHealth = 10;
     //public Text PlayerHPDisplay;
@@ -36,7 +38,7 @@ public class Player : MonoBehaviour
             //게임 오버 UI 출력
             //게임오버 이펙트
 
-            GameManager.Instance.uIPuaseButton.TimePaused();
+            Time.timeScale = 0f;
             SoundManager.instance.Defeated();
         }
         else
@@ -82,4 +84,8 @@ public class Player : MonoBehaviour
         UpdateGoldUI();
     } */
 
+    public bool IsDead()
+    {
+        return _currentHp <= 0;
+    }
 }

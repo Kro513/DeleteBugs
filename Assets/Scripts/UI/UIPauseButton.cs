@@ -24,7 +24,7 @@ public class UIPauseButton : MonoBehaviour
             PausePanel.SetActive(isPaused);
 
             // 게임 일시 중지 상태에 따라 게임 로직을 정지 또는 재개할 수 있음
-            TimePaused();
+            Time.timeScale = isPaused ? 0 : 1;
         }
     }
     public void ResumeGame()
@@ -38,8 +38,5 @@ public class UIPauseButton : MonoBehaviour
         }
     }
 
-    public void TimePaused()
-    {
-        Time.timeScale = isPaused ? 0 : 1;
-    }
+    
 }
