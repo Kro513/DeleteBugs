@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6635471667860574238}
   - component: {fileID: 6214544324351401037}
   - component: {fileID: 6034441487212226452}
-  - component: {fileID: 6298834342248498992}
+  - component: {fileID: 8325404740622053645}
   m_Layer: 0
   m_Name: Muscipula
   m_TagString: Untagged
@@ -108,7 +108,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6298834342248498992
+--- !u!114 &8325404740622053645
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -117,14 +117,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 3887320874434389161}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e7d76ed3d3bb5141ace06839d7894df, type: 3}
+  m_Script: {fileID: 11500000, guid: d553afdeb7edce24d8020fffcca4b183, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 9108104924641087367, guid: 4ce574c8bbb4e8943b6829d040fa1817, type: 3}
+  projectilePrefab: {fileID: 3887320874434389161}
   spawnPoint: {fileID: 8784964962088204832}
-  attackRate: 5
-  attackRange: 5
-  attackDamage: 5
+  attackRate: 0
+  attackRange: 0
+  attackDamage: 0
 --- !u!1 &8475497612740665827
 GameObject:
   m_ObjectHideFlags: 0
