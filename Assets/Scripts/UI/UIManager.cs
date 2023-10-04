@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class UIManager : Singleton<UIManager>
 {
-    [field: SerializeField] public UIMenu uIMenu { get; private set; }
+    //[field: SerializeField] public UIMenu uIMenu { get; private set; }
     [field: SerializeField] public UIStore uIStore { get; private set; }
     [field: SerializeField] public UIUpgrade uIUpgrade { get; private set; }
     [field: SerializeField] public UIDayNight uiDayNight { get; private set; }

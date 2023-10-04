@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObjectDetector : MonoBehaviour
 {
     [SerializeField] private TowerSpawner towerSpawner;
-    [SerializeField] private UIUpgrade uIUpgrade;
+    //[SerializeField] private UIUpgrade uIUpgrade;
 
     private Camera mainCamera;
     private Ray ray;
@@ -27,12 +27,17 @@ public class ObjectDetector : MonoBehaviour
                 // "Tile" 태그 오브젝트에 부딪히면
                 if (hit.transform.CompareTag("Tile")) 
                 {
-                    Debug.Log("hit");
+                    Debug.Log("hit TIle");
                     towerSpawner.SpawnTower(hit.transform); // 타워 생성 함수 호출
                 }
                 else if (hit.transform.CompareTag("Tower"))
                 {
-                    uIUpgrade.OnUpgradeImg();
+                    FlySwatter selectedTower = hit.transform.GetComponent<FlySwatter>();
+                    Debug.Log("hit Tower");
+                    if (selectedTower != null)
+                    {
+                        selectedTower.Upgrade();
+                    }
                 }
             }
         }

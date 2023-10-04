@@ -34,7 +34,7 @@ public class TowerWeapon : MonoBehaviour
         weaponState = newState;
         StartCoroutine(weaponState.ToString());
     }
-
+    
 	private IEnumerator SearchTarget()
     {
         while (true)
