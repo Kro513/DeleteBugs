@@ -1255,21 +1255,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - spawmTime: 1
-    maxEnemyCount: 5
+    maxEnemyCount: 10
     enemyPrefabs:
     - {fileID: 2902749468420120274, guid: 706d69f97d9706146ac8e1b35b1422e8, type: 3}
   - spawmTime: 1
-    maxEnemyCount: 10
+    maxEnemyCount: 15
     enemyPrefabs:
     - {fileID: 2902749468420120274, guid: 706d69f97d9706146ac8e1b35b1422e8, type: 3}
     - {fileID: 573129311088771011, guid: 532953b9991f73e47846a4662c88b0d6, type: 3}
   - spawmTime: 0.5
-    maxEnemyCount: 10
+    maxEnemyCount: 25
     enemyPrefabs:
     - {fileID: 9074976774318287808, guid: 373cbffe7e8d5ed48962a0b0c1850a50, type: 3}
     - {fileID: 573129311088771011, guid: 532953b9991f73e47846a4662c88b0d6, type: 3}
   - spawmTime: 0.5
-    maxEnemyCount: 15
+    maxEnemyCount: 35
     enemyPrefabs:
     - {fileID: 9074976774318287808, guid: 373cbffe7e8d5ed48962a0b0c1850a50, type: 3}
     - {fileID: 573129311088771011, guid: 532953b9991f73e47846a4662c88b0d6, type: 3}
@@ -10820,6 +10820,7 @@ MonoBehaviour:
   player: {fileID: 310113006}
   waveSystem: {fileID: 215575851}
   uiDayNight: {fileID: 143258208}
+  uIPuaseButton: {fileID: 0}
 --- !u!4 &2074079251
 Transform:
   m_ObjectHideFlags: 0
