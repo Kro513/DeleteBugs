@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7886024027899468657}
   m_Layer: 0
   m_Name: Pesticide
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,8 +116,10 @@ MonoBehaviour:
   projectilePrefab: {fileID: 9108104924641087367, guid: 4ce574c8bbb4e8943b6829d040fa1817, type: 3}
   spawnPoint: {fileID: 4034009681953144464}
   attackRate: 1
-  attackRange: 5
-  attackDamage: 3
+  attackRange: 1
+  attackDamage: 1
+  characterRenderer: {fileID: 2926428628990717063}
+  projectilePoint: {fileID: 540787675627475749}
 --- !u!95 &874788836482991310
 Animator:
   serializedVersion: 5

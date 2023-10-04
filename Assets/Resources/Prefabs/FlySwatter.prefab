@@ -122,9 +122,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 9108104924641087367, guid: 4ce574c8bbb4e8943b6829d040fa1817, type: 3}
   spawnPoint: {fileID: 4529485547771500221}
-  attackRate: 0.5
-  attackRange: 4
-  attackDamage: 4
+  attackRate: 3
+  attackRange: 3
+  attackDamage: 3
 --- !u!1 &8573973211810220660
 GameObject:
   m_ObjectHideFlags: 0
