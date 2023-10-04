@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     public Player player;
     public WaveSystem waveSystem;
     public UIDayNight uiDayNight;
-
+    public UIPauseButton uIPuaseButton;
    
     public void UpdateWaveUI()
     {
@@ -45,6 +45,9 @@ public class GameManager : MonoBehaviour
 	public void GameClear()
 	{
         GameClearUI.SetActive(true);
+        uIPuaseButton.TimePaused();
         SoundManager.instance.Victory();
-	}
+        
+
+    }
 }

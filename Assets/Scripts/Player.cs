@@ -35,6 +35,8 @@ public class Player : MonoBehaviour
             GameOverUI.SetActive(true);
             //게임 오버 UI 출력
             //게임오버 이펙트
+
+            GameManager.Instance.uIPuaseButton.TimePaused();
             SoundManager.instance.Defeated();
         }
         else
