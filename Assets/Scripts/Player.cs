@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
-    
-
     public int _currentHp;
     public int _maxHealth = 10;
     //public Text PlayerHPDisplay;
@@ -32,13 +30,11 @@ public class Player : MonoBehaviour
 
         SoundManager.instance.SFXPlay("BreakingSound", clip);
 
-        if (_currentHp <= 0)
+        if (_currentHp == 0)
         {
             GameOverUI.SetActive(true);
             //게임 오버 UI 출력
             //게임오버 이펙트
-
-            Time.timeScale = 0f;
             SoundManager.instance.Defeated();
         }
         else
@@ -84,8 +80,4 @@ public class Player : MonoBehaviour
         UpdateGoldUI();
     } */
 
-    public bool IsDead()
-    {
-        return _currentHp <= 0;
-    }
 }

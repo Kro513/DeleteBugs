@@ -37,6 +37,4 @@ public class UIPauseButton : MonoBehaviour
             Time.timeScale = 1; // 게임 로직을 다시 재개
         }
     }
-
-    
 }

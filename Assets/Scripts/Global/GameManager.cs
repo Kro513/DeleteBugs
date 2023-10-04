@@ -29,25 +29,22 @@ public class GameManager : MonoBehaviour
     public Player player;
     public WaveSystem waveSystem;
     public UIDayNight uiDayNight;
-    public UIPauseButton uIPuaseButton;
+
    
     public void UpdateWaveUI()
     {
         _currentWave++;
         waveText.text = "Wave:" + (_currentWave);
 
-        //if(_currentWave > 5)
-        //{
-        //    GameClear();
-        //}
+        if(_currentWave > 5)
+        {
+            GameClear();
+        }
     }
 
-	public void GameClear()
+	private void GameClear()
 	{
         GameClearUI.SetActive(true);
-        Time.timeScale = 0f;
         SoundManager.instance.Victory();
-        
-
-    }
+	}
 }
