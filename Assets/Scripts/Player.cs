@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
 
         SoundManager.instance.SFXPlay("BreakingSound", clip);
 
-        if (_currentHp == 0)
+        if (_currentHp <= 0)
         {
             GameOverUI.SetActive(true);
             //게임 오버 UI 출력

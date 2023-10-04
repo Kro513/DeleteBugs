@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class UIDayNight : MonoBehaviour
 {
-   
-    
+
+        
+
         public GameObject Sun;
         public GameObject Moon;
-
+        int SetDayCount = 0;
         void Start()
         {
         SoundManager.instance.PlayDayMusic(); // 낮 상태에서는 낮 브금 재생
@@ -25,6 +26,15 @@ public class UIDayNight : MonoBehaviour
             if (isActive)
             {
             SoundManager.instance.PlayDayMusic(); // 낮 상태에서는 낮 브금 재생
+            }
+        SetDayCount++;
+        int _hp = GameManager.Instance.player._currentHp;
+        if (_hp > 0)
+        {
+            if (SetDayCount == 5)
+            {
+                    GameManager.Instance.GameClear();
+            }
             }
         }
 

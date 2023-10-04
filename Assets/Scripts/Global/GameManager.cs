@@ -36,13 +36,13 @@ public class GameManager : MonoBehaviour
         _currentWave++;
         waveText.text = "Wave:" + (_currentWave);
 
-        if(_currentWave > 5)
-        {
-            GameClear();
-        }
+        //if(_currentWave > 5)
+        //{
+        //    GameClear();
+        //}
     }
 
-	private void GameClear()
+	public void GameClear()
 	{
         GameClearUI.SetActive(true);
         SoundManager.instance.Victory();
