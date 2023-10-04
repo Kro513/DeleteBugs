@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ee040cad82c7784f80b4fa336d2c4ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 6057686338920222205}
+  projectilePrefab: {fileID: 9108104924641087367, guid: 4ce574c8bbb4e8943b6829d040fa1817, type: 3}
   spawnPoint: {fileID: 4529485547771500221}
   attackRate: 3
   attackRange: 3
