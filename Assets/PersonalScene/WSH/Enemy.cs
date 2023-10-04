@@ -61,6 +61,11 @@ public class Enemy : MonoBehaviour
         }
         else
         {
+            if (gameObject.layer == LayerMask.NameToLayer("Boss"))
+            {
+                GameManager.Instance.player.GetDamage(10); // 보스 몬스터에게 10의 데미지
+                                                           // 추가적인 보스 몬스터 동작 수행
+            }
             GameManager.Instance.player.GetDamage(1);
             OnDie();
 
