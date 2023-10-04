@@ -14,12 +14,9 @@ GameObject:
   - component: {fileID: 7092170666630201300}
   - component: {fileID: -476156730458452424}
   - component: {fileID: -8226819059468393710}
-  - component: {fileID: -2124880214541461551}
-<<<<<<< Updated upstream
-  m_Layer: 0
-=======
+
   m_Layer: 6
->>>>>>> Stashed changes
+
   m_Name: Boss
   m_TagString: Enemy
   m_Icon: {fileID: 0}

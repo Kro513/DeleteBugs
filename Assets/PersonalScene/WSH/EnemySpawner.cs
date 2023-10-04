@@ -13,7 +13,9 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private Wave currentWave;
     private List<Enemy> enemyList;
     private GameManager _currentWave;
+    
 
+    
 
     public List<Enemy> EnemyList => enemyList;
 
@@ -51,7 +53,14 @@ public class EnemySpawner : MonoBehaviour
             yield return null;
         }
         Debug.Log("wave clear");
-        GameManager.Instance.uiDayNight.SetDay(true);
+        if (GameManager.Instance.player.IsDead())
+        {
+            GameManager.Instance.uiDayNight.SetDay(false);
+        }
+        else
+        {
+            GameManager.Instance.uiDayNight.SetDay(true);
+        }
     }
 
     private void SpawnEnemyHPSlider(GameObject enemy)
