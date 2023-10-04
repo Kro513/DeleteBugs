@@ -2,8 +2,8 @@ public class Muscipula : TowerWeapon
 {
 	public void Start()
 	{
-		attackRate = 5f;
-		attackRange = 5;
+		attackRate = 0.5f;
+		attackRange = 3;
 		attackDamage = 5;
 	}
 }

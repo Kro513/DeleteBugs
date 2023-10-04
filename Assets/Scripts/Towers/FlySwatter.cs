@@ -2,8 +2,8 @@ public class FlySwatter : TowerWeapon
 {
 	public void Start()
 	{
-		attackRate = 3;
-		attackRange = 3f;
-		attackDamage = 3;
+		attackRate = 1;
+		attackRange = 4;
+		attackDamage = 4;
 	}
 }
